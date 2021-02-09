@@ -1857,3 +1857,76 @@ $(document).ready(function () {
 	});
 
 });
+
+/* ==========================================================================
+	Boutique Sliders
+========================================================================== */
+
+$(document).ready(function () {
+	$('.boutique-slider').owlCarousel({
+
+		responsive: {
+			// breakpoint from 0 up
+			0: {
+				items: 2,
+				margin: 0,
+				dots: false,
+				margin: 5,
+				autoplay: true,
+				autoplayTimeout: 3000,
+				loop: true,
+			},
+			// breakpoint from 991 up
+			991: {
+				items: 3,
+				dots: false,
+				nav: true,
+				margin: 20,
+				autoplay: true,
+				autoplayTimeout: 3000,
+				loop: true,
+			}
+		}
+	})
+});
+
+/* ==========================================================================
+	Close Pop Up
+========================================================================== */
+
+
+$(document).ready(function () {
+	$('.close-pop-up').on('click',function (e) {
+		e.preventDefault();
+		$('.pop-up-wrapper').css('opacity', 0);
+		setTimeout(function(){
+		 $('.pop-up-wrapper').css('display', 'none');
+		}, 410);
+
+	});
+});
+
+/* ==========================================================================
+	Validate Pop email
+========================================================================== */
+
+function validatePopEmail() {
+	const $result = $("#result");
+	const email = $("#pop-email").val();
+	$result.text("");
+
+	if (validateEmail(email)) {
+		$('.email-form-wrapper').addClass('valid');
+		$('.email-form-wrapper').removeClass('invalid');
+	} else {
+		$('.email-form-wrapper').addClass('invalid');
+		$('.email-form-wrapper').removeClass('valid');
+
+	}
+	return false;
+}
+
+$("#pop-email-validate").on("click", validatePopEmail);
+$('#pop-email').on('input', function (e) {
+	validatePopEmail(e.target.value);
+});

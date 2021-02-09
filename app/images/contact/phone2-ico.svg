@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="26" height="25.95" viewBox="0 0 26 25.95">
+  <g id="Component_8_1" data-name="Component 8 – 1" transform="translate(0.5)">
+    <path id="layer1" d="M23.979,19.414l-4.017-2.627a1.854,1.854,0,0,0-2.511.5c-.927,1.12-2.047,2.974-6.258-1.236S8.8,10.684,9.919,9.756a1.854,1.854,0,0,0,.5-2.511L7.794,3.228c-.348-.5-.811-1.313-1.893-1.159A5.274,5.274,0,0,0,2,7.284c0,3.477,2.743,7.726,6.49,11.473s8,6.451,11.434,6.451a5.6,5.6,0,0,0,5.215-3.863C25.254,20.572,24.482,19.761,23.979,19.414Z" transform="translate(-2 0.242)" fill="none" stroke="#a68f54" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1"/>
+    <circle id="Ellipse_173" data-name="Ellipse 173" cx="7" cy="7" r="7" transform="translate(11.5)" fill="#a68f54"/>
+    <text id="_2" data-name="2" transform="translate(15.5 10)" fill="#fff" font-size="10" font-family="Gotham-Book, Gotham"><tspan x="0" y="0">2</tspan></text>
+  </g>
+</svg>

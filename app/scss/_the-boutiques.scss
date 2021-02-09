@@ -1,0 +1,149 @@
+/* ==========================================================================
+   The Boutiques
+   ========================================================================== */
+
+.gradient-background {
+    background: url("../images/the-boutiques/background.jpg");
+
+    .breadcrumbs.light {
+        background: transparent;
+    }
+
+    .the-boutiques {
+        @media screen and (max-width: $md-max) {
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+
+        .boutique-wrapper {
+            padding-bottom: 100px;
+
+            @media screen and (max-width: $md-max) {
+                padding-bottom: 65px;
+            }
+
+            .boutique-item {
+                @include flexbox;
+
+                margin-bottom: 45px;
+
+                @media screen and (max-width: $md-max) {
+                    @include flex-direction(column);
+                    @include align-items(center);
+
+                    margin-bottom: 35px;
+                }
+
+                .boutique-item-left {
+                    img {
+                        @media screen and (max-width: $md-max) {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                .boutique-item-right {
+                    @include flex(1);
+
+                    @media screen and (max-width: $md-max) {
+                        width: 100%;
+                        max-width: 580px;
+                    }
+
+                    > .text-header {
+                        @media screen and (max-width: $md-max) {
+                            display: none;
+                        }
+
+                        h2 {
+                            text-align: left;
+                            padding-left: 25px;
+                        }
+                    }
+
+                    .boutique-down-wrapper {
+                        padding: 60px 40px 58px 40px;
+
+                        @media screen and (max-width: $md-max) {
+                            padding: 20px 15px 20px 15px;
+                        }
+
+                        .text-header {
+                            display: none;
+
+                            @media screen and (max-width: $md-max) {
+                                display: block;
+                                padding: 0;
+                            }
+
+                            h2 {
+                                text-align: left;
+                            }
+                        }
+
+                        .text-btn {
+                            float: right;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .boutique-slider {
+        width: calc(100% - 80px);
+        margin: 0 auto;
+
+        @media screen and (max-width: $md-max) {
+            width: 100%;
+        }
+
+        .boutique-slider-item {
+            video {
+                width: 100%;
+            }
+        }
+
+        .owl-nav {
+            display: block;
+            top: 50%;
+            transform: translateY(-50%);
+
+            .owl-prev {
+                left: -20px;
+            }
+
+            .owl-prev:after {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                background: url(../images/the-boutiques/prev-arrow.png);
+                width: 7px;
+                height: 18px;
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+
+            .owl-next {
+                right: -20px;
+            }
+
+            .owl-next:after {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                background: url(../images/the-boutiques/next-arrow.png);
+                width: 7px;
+                height: 18px;
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+        }
+    }
+}
+
+.newsletter-section.margin-top-0 {
+    margin-top: 0;
+}

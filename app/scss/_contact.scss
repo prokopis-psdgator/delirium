@@ -1,0 +1,278 @@
+/* ==========================================================================
+   Contact
+   ========================================================================== */
+
+.contact-section {
+    padding-bottom: 100px;
+
+    @media screen and (max-width: $md-max) {
+        padding-bottom: 30px;
+    }
+
+    .text-header h2 {
+        padding-bottom: 0;
+    }
+
+    .contact-btns-wrapper {
+        @include flexbox;
+        @include justify-content(center);
+
+        @media screen and (max-width: $md-max) {
+            @include flex-direction(column);
+            @include align-items(center);
+        }
+
+        > a {
+            @include flexbox;
+            @include align-items(center);
+
+            border-radius: 0 25px 25px 0;
+            text-decoration: none;
+            border: 1px solid $gold;
+            padding: 10px 44px 10px 25px;
+            background: $white;
+
+            @media screen and (max-width: $sm-max) {
+                padding: 4px 44px 4px 20px;
+            }
+
+            &:hover {
+                background: $gold;
+                border: 1px solid $black;
+
+                span {
+                    color: $white;
+                }
+
+                .mail-ico {
+                    background: url("../images/contact/mail-ico-hover.svg");
+                    background-repeat: no-repeat;
+
+                    @media screen and (max-width: $sm-max) {
+                        background-size: 24px 26px;
+                        width: 24px;
+                        height: 26px;
+                    }
+                }
+
+                .phone1-ico {
+                    background: url("../images/contact/phone1-ico-hover.svg");
+                    background-repeat: no-repeat;
+
+                    @media screen and (max-width: $sm-max) {
+                        background-size: 18.5px 18.5px;
+                        width: 18.5px;
+                        height: 18.5px;
+                    }
+                }
+
+                .phone2-ico {
+                    background: url("../images/contact/phone2-ico-hover.svg");
+                    background-repeat: no-repeat;
+
+                    @media screen and (max-width: $sm-max) {
+                        background-size: 18.5px 18.5px;
+                        width: 18.5px;
+                        height: 18.5px;
+                    }
+                }
+            }
+        }
+
+        a:not(:last-of-type) {
+            margin-right: 55px;
+
+            @media screen and (max-width: $md-max) {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+        }
+
+        a:last-of-type {
+            @media screen and (max-width: $md-max) {
+                margin-bottom: 10px;
+            }
+        }
+
+        .mail-ico {
+            width: 31px;
+            height: 21px;
+            background: url("../images/contact/mail-ico.svg");
+            background-repeat: no-repeat;
+
+            @media screen and (max-width: $sm-max) {
+                background-size: 24px 26px;
+                width: 24px;
+                height: 26px;
+            }
+        }
+
+        .phone1-ico {
+            width: 26px;
+            height: 26px;
+            background: url("../images/contact/phone1-ico.svg");
+            background-repeat: no-repeat;
+
+            @media screen and (max-width: $sm-max) {
+                background-size: 18.5px 18.5px;
+                width: 18.5px;
+                height: 18.5px;
+            }
+        }
+
+        .phone2-ico {
+            width: 26px;
+            height: 26px;
+            background: url("../images/contact/phone2-ico.svg");
+            background-repeat: no-repeat;
+
+            @media screen and (max-width: $sm-max) {
+                background-size: 18.5px 18.5px;
+                width: 18.5px;
+                height: 18.5px;
+            }
+        }
+
+        span {
+            padding-left: 15px;
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 20px;
+            color: $black;
+
+            @media screen and (max-width: $sm-max) {
+                font-size: 11px;
+                line-height: 15px;
+            }
+        }
+
+        .contact-mail-btn {
+            padding: 10px 34px 10px 25px;
+
+            @media screen and (max-width: $sm-max) {
+                padding: 4px 34px 4px 22px;
+            }
+        }
+    }
+
+    .contact-form-wrapper {
+        padding-right: 15px;
+        padding-left: 15px;
+        padding-bottom: 50px;
+
+        @media screen and (max-width: $md-max) {
+            padding-bottom: 35px;
+        }
+
+        .contact-form {
+            .form-submit-btn-wrapper {
+                text-align: right;
+
+                @media screen and (max-width: $md-max) {
+                    text-align: left;
+                }
+            }
+
+            input.input-style {
+                background: $white;
+            }
+
+            textarea.input-style {
+                height: 147px;
+                background: $white;
+
+                @media screen and (max-width: $sm-max) {
+                    height: 280px;
+                }
+            }
+
+            .contact-privacy {
+                display: block;
+                text-decoration: underline;
+                font-size: 11px;
+                font-weight: 400;
+                line-height: 20px;
+                color: $black;
+                padding-top: 15px;
+            }
+        }
+
+        .btn-dark {
+            padding: 13px 82px;
+
+            @media screen and (max-width: $sm-max) {
+                padding: 13px 74px;
+            }
+        }
+    }
+
+    .text-header-contact {
+        @media screen and (max-width: $md-max) {
+            padding: 25px 0;
+        }
+
+        h2 {
+            padding-bottom: 15px;
+
+            @media screen and (max-width: $md-max) {
+                padding-bottom: 0px;
+                max-width: 80%;
+                margin: 0 auto;
+            }
+        }
+
+        p {
+            @media screen and (max-width: $md-max) {
+                display: none;
+            }
+        }
+    }
+
+    .boutique-section.contact {
+        background: transparent;
+        padding-bottom: 40px;
+
+        @media screen and (max-width: $md-max) {
+            padding-bottom: 10px;
+        }
+    }
+
+    .socials {
+        @include flexbox;
+        @include justify-content(center);
+
+        @media screen and (max-width: $sm-max) {
+            @include flex-direction(column);
+            @include align-items(center);
+        }
+
+        a:first-of-type {
+            margin-right: 40px;
+
+            @media screen and (max-width: $sm-max) {
+                margin-right: 0px;
+                margin-bottom: 10px;
+            }
+        }
+
+        a {
+            @include flexbox;
+            @include align-items(center);
+
+            font-size: 13px;
+            line-height: 20px;
+            font-weight: 400;
+            text-decoration: none;
+            color: $black;
+
+            &:hover {
+                color: $gold;
+            }
+
+            i {
+                margin-right: 15px;
+                font-size: 20px;
+            }
+        }
+    }
+}

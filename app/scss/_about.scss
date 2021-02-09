@@ -1,0 +1,78 @@
+/* ==========================================================================
+   About
+   ========================================================================== */
+
+.about-background {
+    background: url("../images/about/about.jpg") $black;
+    background-repeat: no-repeat;
+    background-position: center -155px;
+
+    @media screen and (max-width: $sm-max) {
+        background-position: center -60px;
+        background-size: 330px;
+    }
+
+    section.breadcrumbs {
+        background: transparent;
+    }
+
+    .about-text {
+        max-width: 894px;
+        width: 100%;
+        margin: 0 auto;
+        padding-top: 640px;
+
+        @media screen and (max-width: $sm-max) {
+            padding-top: 380px;
+        }
+
+        .mobile-d-none {
+            @media screen and (max-width: $sm-max) {
+                display: none;
+            }
+        }
+
+        p {
+            font-size: 15px;
+            line-height: 28px;
+            font-weight: 400;
+            text-align: center;
+            color: $white;
+
+            @media screen and (max-width: $md-max) {
+                padding-left: 40px;
+                padding-right: 40px;
+            }
+
+            @media screen and (max-width: $sm-max) {
+                font-size: 11px;
+                line-height: 19px;
+            }
+        }
+
+        p:not(:last-of-type) {
+            margin-bottom: 40px;
+
+            @media screen and (max-width: $sm-max) {
+                margin-bottom: 30px;
+            }
+        }
+
+        .btn-wrapper {
+            width: 100%;
+            text-align: center;
+            padding-top: 90px;
+            padding-bottom: 90px;
+
+            @media screen and (max-width: $sm-max) {
+                padding-top: 60px;
+                padding-bottom: 60px;
+            }
+
+            .btn-dark {
+                padding: 13px 39px;
+                line-height: 11px;
+            }
+        }
+    }
+}
