@@ -1,0 +1,96 @@
+.form-input-wrapper .invalid-email.invalid-edit {
+    right: 25px;
+}
+
+.date-select-wrapper {
+    flex-basis: 50% !important;
+
+    .select-date-flex {
+        @include flexbox;
+
+        :not(:last-of-type) {
+            border-right: 1px solid #A68F54;
+        }
+
+        select {
+            position: relative;
+            vertical-align: middle;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 15px;
+            flex-basis: calc(33.3333%);
+            border: 0;
+            -webkit-appearance: none;
+            padding: 17px 15px;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            outline: none;
+            background-image: url("../images/my-account/arrow.svg");
+            background-repeat: no-repeat;
+            background-position: 90% 50%;
+            background-color: #f5f5f5;
+
+            @media screen and (max-width: $md-max) {
+                flex-basis: calc(33.3333%);
+            }
+        }
+
+        select::-ms-expand {
+            display: none;
+        }
+    }
+
+    .select-date-block {
+        select {
+            position: relative;
+            vertical-align: middle;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 15px;
+            flex-basis: calc(33.3333% - 16px);
+            border: 0;
+            width: 100%;
+            -webkit-appearance: none;
+            padding: 17.5px 10px;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            outline: none;
+            background-image: url("../images/my-account/arrow.svg");
+            background-repeat: no-repeat;
+            background-position: 97% 50%;
+            background-color: #f5f5f5;
+            color: rgba(0, 0, 0, 0.45);
+        }
+
+        select::-ms-expand {
+            display: none;
+        }
+    }
+}
+
+.edit-save-changes {
+    cursor: pointer;
+    margin-left: auto;
+    padding: 13px 0 !important;
+    line-height: 11px;
+    max-width: 198px;
+    margin-right: 23px;
+    text-align: center;
+    width: 198px;
+
+    @include letter-spacing(150);
+
+    @media screen and (max-width: $md-max) {
+        margin-left: 23px;
+    }
+}
+
+.change-password.d-none {
+    display: none !important;
+}
+
+.form-input-wrapper.has_input.edit-email::before {
+    left: 30px;
+}

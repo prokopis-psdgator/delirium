@@ -1,0 +1,128 @@
+/* ==========================================================================
+   MMENU
+   ========================================================================== */
+#burger-menu {
+    .mm-navbar {
+
+        &.mm-navbar_sticky {
+            background: $gold;
+
+            span {
+                width: 100%;
+                text-align: left;
+                font-size: 15px;
+                text-transform: uppercase;
+                text-decoration: none;
+                font-weight: 500;
+                color: $black;
+                line-height: 1;
+            }
+
+        }
+
+        &>span {
+            flex-wrap: wrap;
+        }
+
+        .top-bar {
+            width: 100%;
+        }
+
+        header {
+            width: 100%;
+        }
+
+    }
+
+    .mm-panel {
+        padding: 15px 10px 15px 25px;
+        background-color: $gray-background;
+    }
+
+    .mm-listitem {
+        padding-left: 15px;
+        padding-right: 10px;
+
+        &-selected {
+            background-color: $gray-background;
+
+            & > .mm-listitem__text {
+                background-color: $gray-background;
+            }
+        }
+    }
+
+    .mm-listitem__text {
+        font-size: 15px;
+        text-decoration: none;
+        font-weight: 400;
+        color: $black;
+        padding-left: 0;
+        padding-right: 0;
+        text-transform: uppercase;
+
+        &:hover {
+            background-color: $gray-background !important;
+            color: $gold;
+        }
+
+        &.exclusive-menu-link {
+            color: $gold;
+            font-size: 10px;
+            font-weight: 400 !important;
+            margin: 20px 0;
+            padding-left: 40px;
+            position: relative;
+
+            &::before {
+                content: "";
+                background-image: url(../../../images/header/menu/rose.svg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                left: 0;
+            }
+        }
+
+        &.text-btn {
+            font-size: 10px;
+            font-weight: 400;
+            flex-grow: 0;
+            flex-basis: auto;
+            padding: 4px 10px 2px 0;
+            margin-bottom: 5px;
+            text-transform: uppercase !important;
+        }
+    }
+
+    .mm-btn {
+        border: none;
+    }
+
+
+    .brands-panel li:first-of-type a {
+        margin-bottom: 30px;
+    }
+
+
+    #mm-1 {
+        .mm-navbar.mm-navbar_sticky {
+            display: none !important; //Hide Menu Bar only for the first panel
+        }
+
+        .mm-listitem__text {
+            font-weight: 500;
+        }
+    }
+
+    .third-panel {
+        .mm-listitem__text {
+            text-transform: capitalize;
+        }
+    }
+    
+}
+

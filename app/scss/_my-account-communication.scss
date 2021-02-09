@@ -1,0 +1,60 @@
+.communication-text {
+    max-width: 698px;
+
+    p {
+        font-size: 11px;
+        line-height: 16px;
+        font-weight: 400;
+        color: $black;
+    }
+}
+
+.data-block-flex.data-block--padding {
+    padding-top: 10px;
+    padding-bottom: 20px;
+
+    @media screen and (max-width: $sm-max) {
+        padding-bottom: 30px;
+    }
+}
+
+.section-account-communication-right {
+    @media screen and (max-width: $sm-max) {
+        margin-left: 0px;
+    }
+
+    margin-left: 35px;
+    flex-basis: 1150px;
+}
+
+.form-group.form-communication-wrapper {
+    display: block;
+
+    .form-input-wrapper:last-of-type {
+        @include flexbox;
+
+        @media screen and (max-width: $lg-max) {
+            display: block;
+        }
+
+        .form-submit-btn-wrapper {
+            flex-basis: 338px;
+            margin-left: auto;
+        }
+    }
+}
+
+.submit-communication {
+    @include letter-spacing(150);
+
+    padding: 13px 0;
+    line-height: 11px;
+    min-width: 198px;
+    width: 198px;
+    text-align: center;
+
+    @media screen and (max-width: $lg-max) {
+        margin-top: 25px;
+        margin-bottom: 30px;
+    }
+}

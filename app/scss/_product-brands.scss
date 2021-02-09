@@ -1,0 +1,137 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.brands-list {
+    .top-brands {
+        .container {
+            @media screen and (max-width: $sm-max) {
+                padding-left: 4px;
+                padding-right: 4px;
+            }
+        }
+
+        .col {
+            @media screen and (max-width: $sm-max) {
+                padding-left: 4px;
+                padding-right: 4px;
+            }
+        }
+
+        .brand-item {
+            @include flexbox;
+            @include align-items(center);
+            @include justify-content(center);
+
+            height: 101px;
+            background: $black;
+
+            @media screen and (max-width: $sm-max) {
+                height: 57px;
+            }
+        }
+
+        .brand-item.mobile--margin-top {
+            @media screen and (max-width: $sm-max) {
+                margin-top: 8px;
+            }
+        }
+    }
+
+    .brands-A-Z-wrapper {
+        .container {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .brands-inline {
+            @include flexbox;
+            @include justify-content(space-between);
+            @include flex-wrap(wrap);
+
+            span {
+                margin-right: 15px;
+                font-size: 25px;
+                line-height: 35px;
+                color: $black;
+                cursor: pointer;
+
+                @media screen and (max-width: $sm-max) {
+                    font-size: 15px;
+                    line-height: 21px;
+                }
+
+                &:hover {
+                    color: $gold;
+                }
+
+                a {
+                    color: inherit;
+                    text-decoration: none;
+                }
+
+                a.active {
+                    color: $gold;
+                }
+            }
+        }
+
+        .masonry-layout-wrapper {
+            margin-top: 90px;
+
+            @media screen and (max-width: $sm-max) {
+                margin-top: 55px;
+            }
+
+            .brand-item::before {
+                display: block;
+                content: " ";
+                margin-top: -285px;
+                height: 285px;
+                visibility: hidden;
+                pointer-events: none;
+            }
+
+            .brand-item.active {
+                color: $gold;
+            }
+
+            .brand-item {
+                color: $black;
+                width: calc(25% - 15px);
+                margin-bottom: 60px;
+
+                @media screen and (max-width: $sm-max) {
+                    width: 100%;
+                    margin-bottom: 50px;
+                }
+
+                h3 {
+                    font-size: 78px;
+                    line-height: 109px;
+                    font-weight: 500;
+                }
+
+                ul {
+                    list-style: none;
+                    margin: 0;
+
+                    li {
+                        font-size: 15px;
+                        line-height: 25px;
+
+                        @include letter-spacing(50);
+
+                        a {
+                            color: $black;
+                            text-decoration: none;
+                            &:hover{
+                                color: $gold;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

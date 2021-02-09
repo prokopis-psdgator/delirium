@@ -1,0 +1,32 @@
+/* ==========================================================================
+   Whishlist
+   ========================================================================== */
+
+.category-hero .container-shop .category-text .text__title--whishlist {
+    @include flexbox;
+
+    margin-bottom: 72px;
+
+    @media screen and (max-width: $xs-max) {
+        font-size: 10px;
+        margin-bottom: 0;
+    }
+
+    span {
+        @media screen and (max-width: $xs-max) {
+            margin-top: 5px;
+        }
+    }
+
+    img {
+        width: 63px;
+        height: 54px;
+        margin-left: 16px;
+
+        @media screen and (max-width: $xs-max) {
+            width: 31px;
+            height: 34px;
+            margin-left: 6px;
+        }
+    }
+}

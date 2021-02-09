@@ -1,0 +1,69 @@
+.form-group--inline {
+    .address-wrapper:last-of-type {
+        @media screen and (max-width: $md-max) {
+            margin-top: 15px;
+        }
+    }
+}
+
+.address-wrapper {
+    @include flex-basis(50%);
+    @include flexbox;
+
+    height: 140px;
+    background: #F5F5F5;
+    margin: 0 23px;
+    padding: 0;
+
+    @media screen and (max-width: $lg-max) {
+        height: 100px;
+    }
+
+    .address--left {
+        @include flexbox;
+        @include align-items(center);
+
+        .address-text {
+            font-size: 17px;
+            line-height: 22px;
+            font-weight: 400;
+            color: $black;
+            min-width: 165px;
+
+            @media screen and (max-width: $lg-max) {
+                font-size: 11px;
+                line-height: 12px;
+                min-width: 110px;
+            }
+        }
+    }
+
+    .address--right {
+        @include flexbox;
+        @include flex-direction(column);
+        @include justify-content(center);
+
+        margin-left: auto;
+
+        .address--right-top {
+            @include align-self(flex-end);
+            @include flexbox;
+
+            margin-top: 15px;
+
+            span {
+                @include letter-spacing(300);
+
+                font-size: 10px;
+                line-height: 28px;
+                font-weight: 400;
+                color: $gold;
+            }
+        }
+
+        .address--right-bottom {
+            margin-top: auto;
+            margin-bottom: 15px;
+        }
+    }
+}

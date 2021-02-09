@@ -1,0 +1,29 @@
+$gold: #a68f54; //primary
+$secondary: #000; //secondary
+$light: #f1ede6;
+$dark: #222222;
+$black: #000;
+$gray-text: #707070;
+$white: #fff;
+$gray-background: #f5f5f5;
+$red: #ff0000;
+$green: #00ad3f;
+
+$grid-gutter: 15px !default;
+$grid-max-innerwidth: 1140px !default;
+$grid-max-width: $grid-max-innerwidth + ($grid-gutter * 2) !default;
+$grid-columns: 12 !default;
+
+$breakpoint-sm: 767px !default;
+$breakpoint-md: $grid-max-width !default;
+
+$breakpoints: (
+  "": false,
+  "md": $breakpoint-md,
+  "sm": $breakpoint-sm,
+);
+$xs-max: 575px !default;
+$sm-max: 767px !default;
+$md-max: 991px !default;
+$lg-max: 1199px !default;
+$lg-over-max: 1300px !default;

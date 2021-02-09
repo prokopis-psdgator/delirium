@@ -1,0 +1,473 @@
+/* ==========================================================================
+   Fonts
+   ========================================================================== */
+@font-face {
+    font-family: "Gotham";
+    src: url("../fonts/Gotham-Book.otf") format("opentype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Gotham";
+    src: url("../fonts/Gotham-Medium.otf") format("opentype");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Gotham";
+    src: url("../fonts/Gotham-Bold.otf") format("opentype");
+    font-weight: 700;
+}
+
+/* ==========================================================================
+   reset default browser style 
+   ========================================================================== */
+:focus {
+    outline: none;
+}
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+.btn-dark {
+    display: inline-block;
+    text-decoration: none;
+    background-color: black;
+    font-size: 0.625em;
+    color: white !important;
+    text-transform: uppercase;
+    padding: 10px 70px;
+    font-family: "Gotham";
+    border: 0;
+    @include letter-spacing(150);
+
+    @include border-radius(0 25px 25px 0);
+
+    position: relative;
+    z-index: 0;
+
+    &::after {
+        content: "";
+        border: 1px solid $gold;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+
+        @include border-radius(0 25px 25px 0);
+
+        z-index: 1;
+
+        @include transition(all 300ms);
+    }
+
+    &:hover {
+        &::after {
+            left: 4px;
+            top: 4px;
+        }
+    }
+}
+
+.btn-light {
+    display: inline-block;
+    text-decoration: none;
+    background-color: $gray-background;
+    font-size: 0.625em;
+    color: $black !important;
+    text-transform: uppercase;
+    padding: 10px 70px;
+    font-family: "Gotham";
+    border: 0;
+    @include letter-spacing(150);
+
+    @include border-radius(25px 0 0 25px);
+
+    position: relative;
+    z-index: 0;
+
+    &::after {
+        content: "";
+        border: 1px solid $gold;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+
+        @include border-radius(25px 0 0 25px);
+
+        z-index: 1;
+
+        @include transition(all 300ms);
+    }
+
+    &:hover {
+        &::after {
+            left: -4px;
+            top: 4px;
+        }
+    }
+}
+
+.text-btn {
+    display: inline-block;
+    text-decoration: none;
+    background-color: transparent;
+    font-size: 0.625em;
+    color: $gold !important;
+    text-transform: uppercase;
+    padding-bottom: 4px;
+    font-family: "Gotham";
+    border-bottom: 1px solid $gold;
+    @include letter-spacing(369);
+
+    @include transition(all 300ms);
+
+    &:hover {
+        color: $black!important;
+        border-color: $black;
+    }
+}
+
+.btn {
+    &-close {
+        position: relative;
+
+        &:before,
+        &:after {
+            content: "";
+            box-sizing: content-box;
+            display: block;
+            width: 12px;
+            margin: auto;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            border: 1px solid $gold;
+        }
+
+        &:before {
+            border-right: none;
+            border-bottom: none;
+            right: 18px;
+            transform: rotate(-45deg);
+        }
+
+        &:after {
+            border-left: none;
+            border-top: none;
+            right: 18px;
+            transform: rotate(45deg);
+        }
+    }
+}
+
+/* ==========================================================================
+   html body
+   ========================================================================== */
+
+body {
+    font-family: "Gotham";
+    font-weight: 400;
+}
+
+
+/* ==========================================================================
+   container
+   ========================================================================== */
+.container {
+    max-width: 1250px;
+    width: 100%;
+    margin: 0 auto;
+
+    &-shop {
+        max-width: 1590px;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+/* ==========================================================================
+   generic text
+   ========================================================================== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+    font-weight: 700;
+}
+
+p {
+    font-weight: 400;
+}
+
+/* ==========================================================================
+   icons text
+   ========================================================================== */
+.header-links {
+    display: inline-block;
+
+    &:not(:last-of-type) {
+        padding-right: 19px;
+
+        @media screen and (max-width: $xs-max) {
+            padding-right: 10px;
+        }
+    }
+
+    &:last-of-type {
+        padding-right: 8px;
+    }
+
+    a {
+        position: relative;
+
+        @media screen and (max-width: $xs-max) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &:before {
+            content: "";
+            display: inline-block;
+            background-repeat: no-repeat;
+            background-position: center;
+            vertical-align: middle;
+        }
+    }
+}
+
+.g-rose {
+    a {
+        &:before {
+            // background: url("../images/header/rose.svg"),
+            //   linear-gradient(
+            //     -90deg,
+            //     rgba(166, 143, 84, 1) 0%,
+            //     rgba(137, 118, 69, 1) 60%,
+            //     rgba(113, 96, 48, 1) 100%
+            //   );
+            background: url("../images/header/rose.svg"), linear-gradient(-90deg, rgba(113, 96, 48, 1) 0%, rgba(137, 118, 69, 1) 60%, rgba(166, 143, 84, 1) 100%);
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 25px;
+            width: 25px;
+            border-radius: 20px;
+
+            @include transition(0.3s);
+
+            font-size: 0;
+
+            @media screen and (max-width: $sm-max) {
+                display: none;
+            }
+        }
+
+        &:hover {
+            &:before {
+                background-position: 98%;
+                width: 169px;
+                text-transform: uppercase;
+                content: "Exclusive Beauty Club";
+                font-size: 9px;
+                padding: 7px 0 0 16px;
+                color: $white;
+                line-height: 1.33;
+            }
+        }
+    }
+}
+
+.wishlist {
+    a {
+        &:before {
+            background-image: url("../images/header/wishlist.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            height: 19px;
+            width: 22px;
+        }
+
+        &:hover {
+            &:before {
+                background-image: url("../images/header/wishlist-hover.svg");
+            }
+        }
+    }
+}
+
+.account {
+    a {
+        &:before {
+            background-image: url("../images/header/account.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            height: 19px;
+            width: 22px;
+        }
+
+        &:hover {
+            &:before {
+                background-image: url("../images/header/account-hover.svg");
+            }
+        }
+    }
+}
+
+.shopping-cart {
+    a {
+        &:before {
+            background-image: url("../images/header/cart.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            height: 22px;
+            width: 20px;
+        }
+
+        &:hover {
+            &:before {
+                background-image: url("../images/header/cart-hover.svg");
+            }
+        }
+    }
+}
+
+.cart-items-count,
+.wishlist-count {
+    position: absolute;
+    right: -8px;
+    top: 4px;
+    font-size: 10px;
+    font-family: "Gotham";
+    font-weight: 400;
+    line-height: 1.4;
+    color: $gold;
+
+    @media screen and (max-width: $xs-max) {
+        top: unset;
+        right: unset;
+    }
+}
+
+@media screen and (max-width: $xs-max) {
+    .cart-items-count {
+        bottom: 0;
+        line-height: 15px;
+    }
+
+    .wishlist-count {
+        line-height: 19px;
+    }
+}
+
+//capitalize text
+.caps {
+    text-transform: uppercase;
+}
+
+/* ==========================================================================
+   Text Content
+   ========================================================================== */
+
+.text-header {
+    max-width: 886px;
+    margin: 0 auto;
+    padding: 40px 0;
+
+    @media screen and (max-width: $sm-max) {
+        padding: 30px 0;
+    }
+
+    h2 {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 21px;
+        text-align: center;
+        color: $gold;
+        padding-bottom: 15px;
+
+        @include letter-spacing(150);
+
+        @media screen and (max-width: $sm-max) {
+            font-size: 15px;
+            line-height: 16px;
+        }
+    }
+
+    p {
+        font-size: 13px;
+        line-height: 20px;
+        color: $secondary;
+        text-align: center;
+
+        @media screen and (max-width: $sm-max) {
+            font-size: 11px;
+            line-height: 16px;
+        }
+    }
+}
+
+
+/* ==========================================================================
+   Breadcrumbs
+   ========================================================================== */
+section.breadcrumbs {
+    background-color: #000;
+    height: 40px;
+    line-height: 36px;
+
+    &.light {
+        background-color: #fff;
+
+        a {
+            color: #000;
+        }
+    }
+
+    a {
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        margin-right: 15px;
+        font-size: 10px;
+        font-weight: 400;
+        @include letter-spacing(50);
+        position: relative;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        &::after {
+            content: "\002F";
+            position: absolute;
+            right: -14px;
+            top: 0;
+            line-height: 1;
+        }
+
+        &:last-child {
+            pointer-events: none;
+            cursor: default;
+
+            &::after {
+                content: "";
+            }
+        }
+
+        &:first-child {
+            @media screen and (max-width: $lg-over-max) {
+                margin-left: 25px;
+            }
+        }
+    }
+} 

@@ -1,0 +1,255 @@
+/* ==========================================================================
+   CART
+   ========================================================================== */
+#cart-menu {
+    padding: 10px 25px 25px;
+    background-color: #fff;
+
+    @media screen and (max-width: $xs-max) {
+        padding: 0 0 25px;
+
+        .mm-panels, .mm-navbars_bottom {
+            margin: 0 25px;
+        }
+    }
+
+    .mm-navbars_top {
+        @media screen and (max-width: $xs-max) {
+            background-color: $gold;
+        }
+
+        .mm-navbar:nth-of-type(1) {
+            @media screen and (min-width: $xs-max) {
+                display: none;
+            }
+
+            span {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .top-bar, header {
+                width: 100%;
+            }
+        }
+
+        .mm-navbar:nth-of-type(2) {
+            flex-direction: column;
+            border: none;
+            background-color: transparent;
+
+            @media screen and (max-width: $xs-max) {
+                flex-direction: row-reverse;
+                gap: 15px;
+                padding: 0 25px;
+            }
+
+            .mm-btn_close {
+                align-self: flex-end;
+                margin-right: -20px;
+            }
+
+            .mm-btn_close:after, .mm-btn_close:before {
+                width: 10px;
+                height: 10px;
+            }
+
+            .mm-btn_close:after {
+                right: 32px;
+            }
+
+            .cart-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .cart-header_left {
+                    font-size: 15px;
+                    color: $black;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                }
+
+                .cart-header_right {
+                    font-size: 14px;
+                    color: $gold;
+                    font-weight: 400;
+                    text-transform: uppercase;
+
+                    @media screen and (max-width: $xs-max) {
+                        color: $black;
+                    }
+                }
+            }
+        }
+    }
+
+    .mm-navbar {
+        background-color: #fff;
+
+        &.mm-navbar_sticky {
+            display: none;
+        }
+    }
+
+    .mm-listitem__text {
+        padding: 15px 15px 20px 0;
+        border-bottom: 1px solid #a68f54;
+    }
+
+    .cart-item {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+
+        .remove-cart-item {
+            img {
+                height: 9px;
+                max-width: 9px;
+            }
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .cart-item__info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+
+            .cart-item__title {
+                width: 100%;
+                flex: 0 0 100%;
+                font-size: 11px;
+                font-weight: 600;
+                text-transform: uppercase;
+                color: $black;
+            }
+
+            .cart-item__desc {
+                width: 100%;
+                flex: 0 0 100%;
+                font-size: 12px;
+                font-weight: 400;
+                text-transform: uppercase;
+                color: $black;
+            }
+
+            .cart-item__desc {
+                width: 100%;
+                flex: 0 0 100%;
+
+                span {
+                    display: block;
+                }
+            }
+
+            .cart-item__quantity-edit {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                font-size: 15px;
+                font-weight: 400;
+
+                span {
+                    font-weight: 400;
+                    font-size: 15px;
+                    color: $black;
+                    text-transform: uppercase;
+                }
+
+                a {
+                    font-weight: 400;
+                    font-size: 15px;
+                    color: #848484;
+                }
+            }
+
+            .cart-item__price {
+                display: flex;
+                flex-direction: column;
+
+                .starting-price {
+                    color: $gold;
+                    text-decoration: line-through;
+                    font-size: 15px;
+                    font-weight: 400;
+                }
+
+                .final-price {
+                    color: $black;
+                    font-size: 15px;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
+    .mm-navbars_bottom {
+        .mm-navbar {
+            border: none;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cart-cost {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 15px;
+
+            span:first-of-type {
+                font-size: 14px;
+                font-weight: 400;
+                color: $black;
+            }
+
+            span:last-of-type {
+                font-size: 15px;
+                font-weight: 400;
+                color: $black;
+            }
+
+            &.total {
+                border-top: 1px solid $gold;
+
+                span:first-of-type {
+                    font-weight: 600;
+                }
+
+                span:last-of-type {
+                    font-weight: 500;
+                }
+            }
+        }
+
+        .cart-buttons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 45px;
+
+            .cart-buttons__back {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .btn-dark {
+                padding: 10px 40px;
+            }
+
+            .text-btn {
+                padding-bottom: 1px;
+            }
+        }
+    }
+
+    .mm-panel, .mm-panels {
+        background-color: #fff;
+    }
+}

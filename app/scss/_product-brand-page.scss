@@ -1,0 +1,361 @@
+/* ==========================================================================
+   Brand Page
+   ========================================================================== */
+
+.breadcrumbs.negative--margin {
+    margin-bottom: -40px;
+    position: relative;
+
+    @media screen and (max-width: $md-max) {
+        margin-bottom: 0px;
+    }
+}
+
+.brand-hero {
+    .brand-hero-wrapper {
+        .brand-hero--left {
+            width: 50%;
+            display: inline-block;
+            background: $black;
+            height: 600px;
+
+            @media screen and (max-width: $md-max) {
+                display: block;
+                width: 100%;
+                height: 260px;
+                text-align: center;
+            }
+
+            .flex-basis {
+                width: calc(((100vw - 1590px)/2) - 15px);
+                min-width: 20px;
+                padding: 200px 0 200px;
+                display: inline-block;
+
+                @media screen and (max-width: $lg-max) {
+                    padding-top: 0px;
+                    min-width: 0;
+                }
+            }
+
+            .left-content {
+                padding-top: 208px;
+                margin: 0 auto;
+                display: inline-block;
+
+                @media screen and (min-width: $md-max) and (max-width: 1075px) {
+                    padding-top: 0;
+                }
+
+                @media screen and (max-width: $md-max) {
+                    width: fit-content;
+                    width: -moz-fit-content;
+                    padding-top: 25px;
+                    text-align: center;
+                }
+
+                img {
+                    @media screen and (max-width: $md-max) {
+                        width: 209px;
+                    }
+                }
+
+                .custom-select {
+                    position: relative;
+                    width: 200px;
+
+                    @media screen and (max-width: $md-max) {
+                        margin: 0 auto;
+                    }
+                }
+
+                .custom-select select {
+                    display: none;
+
+                    /*hide original SELECT element:*/
+                }
+
+                .select-selected {
+                    background-color: $gray-background;
+                }
+
+                /*style the arrow inside the select element:*/
+                .select-selected:after {
+                    position: absolute;
+                    content: "";
+                    top: 20px;
+                    right: 10px;
+                    width: 0;
+                    height: 0;
+                    border: 6px solid transparent;
+                    border-color: $gold transparent transparent transparent;
+                }
+
+                /*point the arrow upwards when the select box is open (active):*/
+                .select-selected.select-arrow-active:after {
+                    border-color: transparent transparent $gold transparent;
+                    top: 12px;
+                }
+
+                /*style the items (options), including the selected item:*/
+                .select-items div,
+                .select-selected {
+                    color: $black;
+                    font-size: 11px;
+                    text-transform: uppercase;
+                    font-weight: 400;
+                    padding: 17px 16px;
+                    cursor: pointer;
+                    user-select: none;
+                }
+
+                /*style items (options):*/
+                .select-items {
+                    position: absolute;
+                    background-color: $gray-background;
+                    top: 100%;
+                    left: 0;
+                    right: 0;
+                    z-index: 99;
+                }
+
+                /*hide the items when the select box is closed:*/
+                .select-hide {
+                    display: none;
+                }
+
+                .select-items div:hover,
+                .same-as-selected {
+                    background-color: rgba(0, 0, 0, 0.1);
+                }
+
+                p {
+                    padding-top: 25px;
+                    padding-bottom: 40px;
+                    font-size: 11px;
+                    font-weight: 400;
+                    line-height: 16px;
+                    color: #B7B7B7;
+                    max-width: 523px;
+
+                    @media screen and (max-width: $md-max) {
+                        text-align: center;
+                        max-width: 300px;
+                        padding-top: 15px;
+
+                        span {
+                            display: none;
+                        }
+                    }
+                }
+
+                .text-btn {
+                    padding-top: 15px;
+                    color: #FFFFFF !important;
+                    border-bottom: 1px solid #FFFFFF;
+
+                    &:hover {
+                        color: #a68f54 !important;
+                        border-bottom: 1px solid #a68f54;
+                    }
+                }
+            }
+        }
+
+        .brand-hero--right {
+            width: 50%;
+            display: inline-block;
+            float: right;
+
+            @media screen and (max-width: $md-max) {
+                float: none;
+                display: block;
+                width: 100%;
+            }
+
+            .owl-item div {
+                height: 600px;
+
+                @media screen and (max-width: $md-max) {
+                    height: 260px;
+                }
+            }
+
+            .owl-nav {
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            .owl-nav .owl-prev:after {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                background: url(../images/brand-page/prev-arrow.svg);
+                width: 12px;
+                height: 18px;
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+
+            .owl-nav .owl-next:after {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                background: url(../images/brand-page/next-arrow.svg);
+                width: 12px;
+                height: 18px;
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+
+            .brand-hero-img {
+                background: url("../images/brand-page/right-brand-hero.jpg");
+                background-repeat: no-repeat;
+                background-position: center left;
+                background-size: cover;
+            }
+        }
+    }
+}
+
+.category-products.brand-products .container-shop .product-gallery {
+    width: 75%;
+}
+
+.category-products.brand-products .container-shop {
+    padding-bottom: 0;
+}
+
+.brand-entree-wrapper {
+    @media screen and (max-width: $md-max) and (min-width: $sm-max) {
+        margin-top: 15px;
+    }
+
+    .text-header {
+        padding: 0;
+    }
+
+    .brand-wrapper {
+        .brand-carousel-wrapper {
+            width: calc(100% - 80px);
+            margin: 0 auto;
+
+            @media screen and (max-width: $xs-max) {
+                width: 100%;
+            }
+
+            .brand-carousel-item {
+                a {
+                    text-decoration: none;
+
+                    h3 {
+                        font-size: 16px;
+                        line-height: 18px;
+                        font-weight: 400;
+                        color: $black;
+                        padding-top: 20px;
+                        padding-bottom: 15px;
+
+                        @media screen and (max-width: $xs-max) {
+                            font-size: 14px;
+                            line-height: 15px;
+                            padding-top: 15px;
+                            padding-bottom: 10px;
+                        }
+                    }
+                }
+
+                @media screen and (max-width: $xs-max) {
+                    max-width: 238px;
+                }
+            }
+
+            .owl-stage-outer {
+                @media screen and (max-width: $xs-max) {
+                    transform: translate3d(-49px, 0px, 0px) !important;
+                    -webkit-transform: translate3d(-49px, 0px, 0px) !important;
+                }
+            }
+
+            .owl-dots {
+                @include flexbox;
+
+                padding-top: 30px;
+
+                @media screen and (max-width: $xs-max) {
+                    padding-top: 25px;
+                }
+            }
+
+            .owl-nav {
+                display: block;
+                top: 33%;
+
+                .owl-prev {
+                    left: -20px;
+                }
+
+                .owl-next {
+                    right: -20px;
+                }
+            }
+        }
+    }
+}
+
+.video-wrapper {
+    margin-top: 85px;
+
+    @media screen and (max-width: $md-max) {
+        margin-top: 50px;
+    }
+
+    video {
+        width: 100%;
+        max-height: 100%;
+    }
+}
+
+.product-gallery {
+    .brand-categorizes.brand-categorizes--padding {
+        padding-top: 120px;
+
+        @media screen and (max-width: $lg-max) {
+            padding-top: 20px;
+        }
+    }
+
+    .brand-categorizes {
+        padding-top: 40px;
+
+        @media screen and (max-width: $lg-max) {
+            padding-top: 20px;
+        }
+
+        .view-all-wrapper {
+            text-align: center;
+        }
+
+        .product-box:last-of-type {
+            display: none;
+
+            @media screen and (max-width: $sm-max) {
+                display: block;
+            }
+        }
+    }
+
+    .banner-img {
+        @media screen and (max-width: $md-max) {
+            padding-top: 40px;
+        }
+
+        padding-top: 50px;
+
+        img {
+            width: 100%;
+        }
+    }
+}

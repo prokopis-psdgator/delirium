@@ -1,0 +1,171 @@
+/* ==========================================================================
+   NAV MENU
+   ========================================================================== */
+
+.nav-menu {
+    li:hover {
+        font-weight: 500;
+
+        .sub-menu-dropdown {
+            /*                display: block;*/
+            /*                @include transform(translate3d(0,0,0) translateZ(-10px));*/
+            opacity: 1;
+            min-height: 370px;
+            height: 100%;
+            padding-top: 31px;
+            margin-top: 116px;
+        }
+
+        .sub-menu-dropdown.bigger-dropdown {
+            min-height: 380px;
+        }
+    }
+}
+
+.sub-menu-dropdown {
+    /*    display: none;*/
+
+    @include transition-duration(0.3s);
+
+    /*    @include transform(translate3d(0px,-50px,0) translateZ(-10px));*/
+    @include transition-delay(0s);
+    @include transition-timing-function(ease-in-out);
+
+    opacity: 1;
+    background-color: $gray-background;
+
+    // padding-bottom: 53px;
+    max-height: 382px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-top: 116px;
+    padding-top: 0px;
+    z-index: 0;
+    height: 0;
+    min-height: 0;
+    overflow: hidden;
+}
+
+.sub-menu-dropdown.bigger-dropdown {
+    /*  min-height: 360px;*/
+}
+
+.menu-level-1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+
+    .menu-column-li {
+        flex: 0 0 25%;
+        max-width: 294px;
+    }
+}
+
+.menu-level-2 {
+    &.caps {
+        .menu-list-item {
+            font-size: 15px;
+            line-height: 2.33;
+            letter-spacing: 0.15em;
+            color: $black;
+        }
+    }
+}
+
+.menu-item {
+    list-style-type: none;
+
+    a {
+        text-decoration: none;
+        color: $black;
+        font-size: 15px;
+        line-height: 1.33;
+        letter-spacing: 0.05em;
+        padding-bottom: 10px;
+
+        @media screen and (max-width: $md-max) {
+            font-size: 10px;
+        }
+
+        @media screen and (max-width: $sm-max) {
+            font-size: 15px;
+        }
+    }
+}
+
+.menu-column-li {
+    list-style: none;
+}
+
+.menu-list-header {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.33;
+    letter-spacing: 0.15em;
+    color: $black;
+    padding-bottom: 8px;
+    text-transform: uppercase;
+    list-style: none;
+
+    &.all {
+        padding-bottom: 50px;
+    }
+}
+
+.menu-list-item {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.57;
+    color: $black;
+    list-style: none;
+
+    &.shop-all {
+        padding: 17px 0 1px;
+        margin-bottom: 28px;
+
+        a {
+            padding-bottom: 3px;
+            color: $gold;
+            font-weight: 400;
+            font-size: 10px;
+            line-height: 1.2;
+            letter-spacing: 0.369em;
+            text-transform: uppercase;
+            border-bottom: 1px solid $gold;
+        }
+    }
+}
+
+/* ==========================================================================
+   BURGER MENU
+   ========================================================================== */
+#desktop-menu {
+    @media screen and (max-width: $md-max) {
+        display: none;
+    }
+}
+
+#burger-menu, .mm-menu_position-bottom {
+    @include transition(transform 0.4s linear);
+}
+
+.burger-menu-btn {
+    display: none;
+    width: 20px;
+    height: 20px;
+    background-image: url(../images/header/open-menu.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @media screen and (max-width: $md-max) {
+        display: inline-block;
+    }
+
+    &.open {
+        background-image: url(../images/header/close-menu.svg);
+    }
+}

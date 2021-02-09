@@ -1,0 +1,104 @@
+/* ==========================================================================
+   Category Page
+   ========================================================================== */
+
+.category-submenu {
+    list-style: none;
+
+    li:first-of-type {
+        margin-bottom: 25px;
+
+        a {
+            font-size: 13px;
+            font-weight: 500;
+            line-height: 14px;
+
+            @include letter-spacing(50);
+        }
+    }
+
+    li {
+        a {
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 25px;
+            color: $black;
+            text-transform: uppercase;
+        }
+    }
+
+    li.is_active {
+        a {
+            color: $gold;
+        }
+    }
+}
+
+.product-gallery {
+
+    .subcategory-entree-wrapper {
+        @media screen and (max-width: $md-max) {
+            display: none;
+        }
+
+        &.mobile {
+            display: none;
+
+            @media screen and (max-width: $md-max) {
+                display: block;
+                margin-bottom: 30px;
+            }
+
+            @media screen and (max-width: $md-max) and (min-width: $sm-max) {
+                margin-top: 15px;
+            }
+        }
+
+        .promoted-brand {
+            position: relative;
+            background: url(../images/category-page/promoted-brand.jpg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            padding: 150px 0;
+
+            @media screen and (max-width: $md-max) {
+                padding: 130px 0;
+            }
+
+            .btn-dark {
+                position: absolute;
+                left: 50%;
+                -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
+                bottom: 17%;
+                padding: 13px 73.42px;
+                line-height: 11px;
+
+                @media screen and (max-width: $md-max) {
+                    bottom: 30px;
+                }
+            }
+        }
+
+        .subcategory-button-wrapper {
+            .row {
+                margin-top: 30px;
+
+                @media screen and (max-width: $sm-max) {
+                    margin-top: 0px;
+                }
+
+                .col {
+                    @media screen and (max-width: $sm-max) {
+                        margin-top: 15px;
+                    }
+                }
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,1599 @@
+/* ==========================================================================
+   Homepage
+   ========================================================================== */
+
+.bg-green {
+    height: 100vh;
+    width: 100%;
+    background-color: green;
+}
+
+/* ==========================================================================
+   Hero Section
+   ========================================================================== */
+
+.home-hero.with-background-cover {
+    .owl-item div {
+        height: 650px;
+
+        @media screen and (max-width: $lg-max) {
+            height: 600px;
+        }
+
+        @media screen and (max-width: $md-max) {
+            height: 450px;
+        }
+
+        @media screen and (max-width: $sm-max) {
+            height: 350px;
+        }
+    }
+
+    .owl-dots {
+        @include flexbox;
+        @include justify-content(center);
+
+        span {
+            background: #A68F54;
+            border-radius: 20px;
+            display: block;
+            height: 1.5px;
+            margin: 18px 8px;
+            width: 29px;
+            opacity: 0.48;
+
+            @media screen and (max-width: $sm-max) {
+                width: 19.5px;
+                margin: 13px 5px;
+            }
+        }
+    }
+
+    .owl-dot.active {
+        span {
+            opacity: 1;
+        }
+    }
+
+    .owl-image {
+        background-image: url("../images/homepage/hero/hero-desktop.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        @media screen and (max-width: $xs-max) {
+            background-image: url("../images/homepage/hero/hero-mobile.jpg");
+            background-size: cover;
+        }
+    }
+}
+
+/* ==========================================================================
+   End Of Hero Section
+   ========================================================================== */
+
+/* ==========================================================================
+   Explore Section
+   ========================================================================== */
+.explore-section {
+    overflow: hidden;
+}
+
+.text-header-explore {
+    @media screen and (max-width: $sm-max) {
+        max-width: 300px;
+    }
+}
+
+.explore-item-image {
+    position: relative;
+
+    @media screen and (max-width: $lg-max) {
+        width: 360px;
+        margin: 0 auto;
+    }
+
+    @media screen and (max-width: $sm-max) {
+        width: 300px;
+        margin: 0 auto;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .btn-dark {
+        padding: 13.5px 66.64px;
+        position: absolute;
+        left: -24px;
+        bottom: -15.5px;
+
+        @media screen and (max-width: $sm-max) {
+            left: -29px;
+        }
+    }
+}
+
+.explore-item-caption {
+    padding-top: 45px;
+
+    @media screen and (max-width: $lg-max) {
+        padding-top: 30px;
+        width: 360px;
+        margin: 0 auto;
+    }
+
+    @media screen and (max-width: $sm-max) {
+        width: 300px;
+        margin: 0 auto;
+    }
+
+    h3 {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 18px;
+        color: $black;
+
+        @media screen and (max-width: $sm-max) {
+            font-size: 14px;
+        }
+    }
+
+    span {
+        display: block;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 20px;
+        padding-top: 10px;
+        color: $black;
+        max-width: 315px;
+
+        @media screen and (max-width: $sm-max) {
+            font-size: 11px;
+        }
+    }
+}
+
+.owl-dots {
+    @include flexbox;
+    @include justify-content(center);
+
+    span {
+        background: #A68F54;
+        border-radius: 20px;
+        display: block;
+        height: 1.5px;
+        margin: 18px 8px;
+        width: 29px;
+        opacity: 0.48;
+
+        @media screen and (max-width: $sm-max) {
+            width: 19.5px;
+            margin: 13px 5px;
+        }
+    }
+}
+
+.owl-dot.active {
+    span {
+        opacity: 1;
+    }
+}
+
+.owl-nav {
+    position: absolute;
+    top: 130px;
+    width: 100%;
+
+    button {
+        font-size: 0px !important;
+    }
+
+    .owl-next {
+        position: absolute;
+        right: 2.5%;
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: url("../images/homepage/next-arrow.png");
+            width: 9px;
+            height: 14px;
+            background-repeat: no-repeat;
+        }
+    }
+
+    .owl-prev {
+        position: absolute;
+        left: 5%;
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: url("../images/homepage/prev-arrow.png");
+            width: 9px;
+            height: 14px;
+            background-repeat: no-repeat;
+        }
+    }
+}
+
+.owl-carousel.explore-wrapper {
+    display: block;
+}
+
+/* ==========================================================================
+   End Of Explore Section
+   ========================================================================== */
+
+/* ==========================================================================
+   Dependent Sliders Section
+   ========================================================================== */
+.section-padding--80-45 {
+    padding: 155px 0 45px;
+}
+
+.dependent-sliders-wrapper {
+    background: linear-gradient(to top, white 43.9%, black 14%);
+
+    @media screen and (max-width: $sm-max) {
+        background: linear-gradient(to top, white 37.1%, black 14%);
+    }
+
+    .flex-wrapper {
+        @include flexbox;
+
+        @media screen and (max-width: $sm-max) {
+            display: block;
+        }
+
+        .slider-left-wrapper {
+            max-width: 58.5%;
+
+            @media screen and (max-width: $sm-max) {
+                max-width: 100%;
+                height: 162px;
+            }
+
+            img {
+                height: 315px;
+
+                @media screen and (max-width: $sm-max) {
+                    height: 162px;
+                }
+            }
+
+            .slider-left-item {
+                font-size: 0;
+            }
+
+            .owl-dots {
+                margin-top: 75px;
+
+                button:first-of-type {
+                    margin-left: auto;
+                }
+
+                button:last-of-type {
+                    margin-right: 45px;
+                }
+            }
+        }
+
+        .slider-right-wrapper {
+            margin-top: -85px;
+            max-width: 41.5%;
+            border: 1px solid $gold;
+
+            @media screen and (max-width: $sm-max) {
+                max-width: 80%;
+                margin: 0 auto;
+                margin-top: -235px;
+            }
+
+            @media screen and (max-width: 450px) {
+                margin-top: -235px;
+            }
+
+            .owl-dots {
+                padding-top: 5px;
+            }
+
+            .owl-item {
+                background: url(../images/homepage/dependent-sliders/shiny-product.png);
+
+                @media screen and (max-width: $sm-max) {
+                    background-size: contain;
+                    background-position: 50% 60%;
+                }
+            }
+
+            .slider-right-item {
+                padding-left: 80px;
+                padding-right: 40px;
+                font-size: 0;
+                width: 100%;
+
+                @media screen and (max-width: $sm-max) {
+                    padding-left: 35px;
+                    padding-right: 0;
+                }
+
+                .img-wrapper {
+                    img {
+                        width: auto;
+
+                        @media screen and (max-width: $sm-max) {
+                            max-width: 175px;
+                        }
+                    }
+                }
+
+                .text-header {
+                    padding: 50px 0 4px;
+
+                    @media screen and (max-width: $sm-max) {
+                        padding: 25px 0 180px;
+                    }
+
+                    h2 {
+                        text-align: left;
+                        padding-bottom: 15px;
+                    }
+                }
+
+                .slider-right-item-caption {
+                    margin-bottom: 30px;
+
+                    h3 {
+                        font-size: 18px;
+                        line-height: 19px;
+                        font-weight: 400;
+                        color: $black;
+                        padding-top: 20px;
+
+                        @media screen and (max-width: $sm-max) {
+                            font-size: 14px;
+                            line-height: 19px;
+                        }
+                    }
+
+                    p {
+                        font-size: 11px;
+                        line-height: 16px;
+                        font-weight: 400;
+                        color: $black;
+                        padding-top: 15px;
+
+                        @media screen and (max-width: $sm-max) {
+                            display: none;
+                        }
+                    }
+
+                    .text-btn {
+                        font-size: 10px;
+                        padding-top: 25px;
+                        padding-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+   End Of Dependent Sliders Section
+   ========================================================================== */
+
+/* ==========================================================================
+   Fluid Carousel Section
+   ========================================================================== */
+
+.fluid-carousel-item.mobile {
+    .background-card {
+        @include flex-direction(column);
+        @include align-items(center);
+
+        height: 312px;
+
+        &:after {
+            content: "SHOP";
+            position: absolute;
+            bottom: -10px;
+            display: inline-block;
+            text-decoration: none;
+            background-color: black;
+            font-size: 0.625em;
+            color: white !important;
+            text-transform: uppercase;
+            padding: 10px 70px;
+            font-family: "Gotham";
+            border: 0;
+            width: 182px;
+            -webkit-border-radius: 0 25px 25px 0;
+            -moz-border-radius: 0 25px 25px 0;
+            border-radius: 0 25px 25px 0;
+            background-repeat: no-repeat;
+            cursor: pointer;
+            left: 43.5%;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+        }
+    }
+
+    .fluid-carousel-item-cta {
+        @include order(1);
+
+        position: relative;
+        width: 241px !important;
+        height: 241px;
+        left: 0;
+        transform: unset;
+        top: 0;
+        margin-top: -40px;
+
+        img {
+            width: 100%;
+        }
+
+        span {
+            font-size: 11px;
+            font-weight: 400;
+            line-height: 20px;
+            color: #fff;
+            position: absolute;
+            top: 64px;
+            background: black;
+            height: 19px;
+            width: 94px;
+            text-align: center;
+            border-radius: 0 20px 20px 0;
+        }
+
+        &:hover {
+            &:after {
+                content: "";
+                display: none;
+            }
+        }
+    }
+
+    .fluid-carousel-item-text {
+        @include order(2);
+
+        width: 241px;
+        padding-right: 0;
+
+        h3 {
+            margin-top: 15px;
+            font-size: 14px;
+            line-height: 15px;
+            height: 45px;
+        }
+
+        span:first-of-type {
+            margin-top: 10px;
+            font-size: 11px;
+            line-height: 12px;
+        }
+
+        span:last-of-type {
+            margin-top: 10px;
+            margin-bottom: 25px;
+            font-size: 16px;
+            line-height: 18px;
+        }
+    }
+}
+
+.fluid-carousel {
+    &-wrapper {
+        padding-bottom: 50px;
+        margin-left: 15px;
+
+        @media screen and (max-width: $sm-max) {
+            padding-top: 10px;
+            padding-bottom: 35px;
+            margin-left: 0px;
+            margin-right: 0;
+        }
+
+        .fluid-carousel-item {
+            cursor: pointer;
+        }
+
+        .fluid-carousel-item:hover {
+            h3 + span {
+                text-decoration: underline;
+            }
+
+            .fluid-carousel-item-cta:before {
+                content: "SHOP";
+                position: absolute;
+                bottom: 14%;
+                right: -140px;
+                display: inline-block;
+                text-decoration: none;
+                background-color: black;
+                font-size: 0.625em;
+                color: white !important;
+                text-transform: uppercase;
+                padding: 10px 70px;
+                font-family: "Gotham";
+                border: 0;
+                -webkit-border-radius: 0 25px 25px 0;
+                -moz-border-radius: 0 25px 25px 0;
+                border-radius: 0 25px 25px 0;
+                background-repeat: no-repeat;
+                cursor: pointer;
+
+                @media screen and (max-width: $lg-max) {
+                    display: none;
+                    width: 0;
+                    height: 0;
+                }
+            }
+        }
+
+        .owl-dots {
+            padding-top: 50px;
+
+            @media screen and (max-width: $sm-max) {
+                padding-top: 0px;
+            }
+        }
+
+        .bg-pink {
+            background: #AC798F;
+        }
+
+        .bg-purple {
+            background: #B06871;
+        }
+
+        .bg-black {
+            background: $black;
+        }
+
+        .owl-stage-outer {
+            padding-top: 65px;
+            padding-bottom: 65px;
+
+            @media screen and (max-width: $sm-max) {
+                padding-bottom: 40px;
+            }
+        }
+    }
+
+    &-item {
+        &-text {
+            @include flexbox;
+            @include flex-direction(column);
+            width: 100%;
+            max-width: 204px;
+            padding-right: 30px;
+
+            h3 {
+                @include align-self(flex-start);
+
+                margin-top: 55px;
+                font-size: 16px;
+                line-height: 18px;
+                font-weight: 400;
+                color: $white;
+            }
+
+            span {
+                display: block;
+            }
+
+            span:first-of-type {
+                font-size: 11px;
+                line-height: 12px;
+                font-weight: 400;
+                margin-top: auto;
+
+                @include letter-spacing(200);
+
+                color: $white;
+            }
+
+            span:last-of-type {
+                font-size: 16px;
+                line-height: 18px;
+                font-weight: 500;
+                color: $white;
+                margin-top: auto;
+                margin-bottom: 40px;
+
+                strike {
+                    padding-right: 15px;
+                }
+            }
+        }
+
+        &-cta {
+            position: absolute;
+            left: 40px;
+            top: 50%;
+            transform: translateY(-50%);
+            max-width: 360px;
+            width: 57.6% !important;
+
+            span {
+                font-size: 11px;
+                font-weight: 400;
+                line-height: 20px;
+                color: #fff;
+                position: absolute;
+                top: 65px;
+                background: black;
+                height: 19px;
+                width: 94px;
+                text-align: center;
+                border-radius: 0 20px 20px 0;
+            }
+
+            img {
+                cursor: pointer;
+            }
+        }
+
+        .background-card {
+            @include flexbox;
+            @include justify-content(flex-end);
+
+            position: relative;
+            height: 230px;
+
+            @media screen and (max-width: $sm-max) {
+                width: 312px;
+            }
+        }
+    }
+}
+
+.fluid-wrapper {
+    background: #F1EDE6;
+}
+
+/* ==========================================================================
+   End Of Fluid Carousel Section
+   ========================================================================== */
+
+/* ==========================================================================
+   Gift Section
+   ========================================================================== */
+
+.big-container {
+    max-width: 1590px;
+    margin: 0 auto;
+}
+
+.gift-item-slider {
+    .owl-stage-outer {
+        padding-bottom: 20px;
+        z-index: 2;
+
+        @media screen and (max-width: $sm-max) {
+            margin-left: 20px;
+        }
+    }
+
+    .owl-next {
+        position: absolute;
+        right: -40px;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+    .owl-nav {
+        height: 76%;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+
+    .owl-prev {
+        position: absolute;
+        left: -40px;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+    .owl-dot {
+        margin-top: 75px;
+        margin-bottom: 65px;
+
+        @media screen and (max-width: $sm-max) {
+            margin-top: 20px;
+            margin-bottom: 45px;
+        }
+    }
+}
+
+.gift-item-wrapper {
+    border: 1px solid $gold;
+    padding: 45px 50px 60px 35px;
+    position: relative;
+
+    @media screen and (max-width: $sm-max) {
+        padding: 25px 15px 15px 25px;
+        width: 260px;
+    }
+
+    h3 {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 18px;
+        color: $black;
+        padding-bottom: 25px;
+
+        @media screen and (max-width: $sm-max) {
+            font-size: 11px;
+            line-height: 12px;
+            padding-top: 0px;
+        }
+    }
+
+    p {
+        font-size: 11px;
+        line-height: 16px;
+        font-weight: 400;
+        color: $black;
+        padding-top: 25px;
+
+        @media screen and (max-width: $sm-max) {
+            font-size: 11px;
+            line-height: 16px;
+            padding-top: 0px;
+        }
+    }
+
+    .btn-dark {
+        position: absolute;
+        bottom: -15px;
+        padding: 10px 76.4px;
+    }
+
+    img {
+        max-width: 343px;
+        margin: 0 auto;
+        
+        @media screen and (max-width: $sm-max) {
+            max-width: 212px;
+        }
+    }
+}
+
+/* ==========================================================================
+   End Of Gift Section
+   ========================================================================== */
+
+/* ==========================================================================
+   Limited Edition Section
+   ========================================================================== */
+
+.limited-edition-section {
+    background: url("../images/homepage/limited-edition-section/background.svg");
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 392px 0 178px;
+    position: relative;
+
+    @media screen and (max-width: $lg-max) {
+        padding: 320px 0 100px;
+    }
+
+    @media screen and (max-width: $md-max) {
+        padding: 270px 0 50px;
+    }
+
+    @media screen and (max-width: $xs-max) {
+        padding: 0;
+        height: 300px;
+        background: url("../images/homepage/limited-edition-section/background-mobile.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .btn-dark {
+        @media screen and (max-width: $xs-max) {
+            position: absolute;
+            right: 11%;
+            bottom: 21%;
+            padding: 10px 58.4px;
+        }
+    }
+}
+
+/* ==========================================================================
+   End Of Limited Edition Section
+   ========================================================================== */
+
+/* ==========================================================================
+   Blog Section
+   ========================================================================== */
+.blog-section {
+    padding: 40px 0 65px;
+
+    @media screen and (max-width: $sm-max) {
+        padding: 25px 0 40px;
+    }
+}
+
+.slider-wrapper {
+    @include flexbox;
+
+    margin-left: 20px;
+    margin-right: 20px;
+
+    .col--6:first-of-type {
+        padding-right: 25px;
+        padding-left: 20px;
+    }
+
+    .col--6:last-of-type {
+        padding-left: 25px;
+        padding-right: 20px;
+    }
+}
+
+.button-wrapper {
+    text-align: center;
+    padding-top: 60px;
+
+    .btn-dark {
+        @include letter-spacing(150);
+
+        padding: 13.5px 93.29px;
+    }
+}
+
+.container-blog {
+    max-width: 1284px;
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+
+    @media screen and (max-width: 1330px) {
+        display: none;
+    }
+
+    .owl-stage-outer {
+        padding-bottom: 5px;
+        margin-bottom: -5px;
+    }
+}
+
+.blog-carousel {
+    .owl-nav {
+        top: 345px;
+
+        .owl-prev {
+            left: -68px;
+        }
+
+        .owl-next {
+            right: -68px;
+        }
+    }
+}
+
+.big-blog {
+    &-wrapper {
+        width: 100%;
+    }
+
+    &-item-up {
+        font-size: 0;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &-item-down {
+        background: #F5F5F5;
+        height: 337px;
+        padding: 30px 40px 35px 35px;
+
+        @include flexbox;
+        @include flex-direction(column);
+
+        span {
+            display: block;
+            font-size: 11px;
+            line-height: 16px;
+            font-weight: 400;
+            color: $black;
+            padding-bottom: 40px;
+        }
+
+        h3 {
+            font-size: 25px;
+            line-height: 27px;
+            font-weight: 400;
+            color: $black;
+            padding-bottom: 20px;
+        }
+
+        p {
+            font-size: 13px;
+            line-height: 20px;
+            font-weight: 400;
+            color: $black;
+        }
+
+        a {
+            margin-top: auto;
+            margin-left: auto;
+            padding-right: 0;
+        }
+    }
+}
+
+.small-blog {
+    @include flexbox;
+
+    .small-text {
+        padding: 60px 40px 35px 20px;
+        background: #F5F5F5;
+
+        @include flexbox;
+
+        @include flex-direction(column);
+
+        span {
+            display: block;
+            font-size: 11px;
+            line-height: 16px;
+            font-weight: 400;
+            color: $black;
+            padding-bottom: 40px;
+        }
+
+        h3 {
+            font-size: 25px;
+            line-height: 27px;
+            font-weight: 400;
+            color: $black;
+            padding-bottom: 20px;
+        }
+
+        p {
+            font-size: 13px;
+            line-height: 20px;
+            font-weight: 400;
+            color: $black;
+        }
+
+        a {
+            margin-top: auto;
+            margin-left: auto;
+            padding-right: 0;
+        }
+    }
+}
+
+.small-blog:first-of-type {
+    padding-bottom: 30px;
+}
+
+.blog-small-item-wrapper {
+    max-width: 577px;
+    width: 100%;
+    margin: 0 auto;
+
+    
+    @media screen and (max-width: $xs-max) {
+        max-width: 300px;
+    }
+
+    .small-blog-item-up {
+        font-size: 0;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .small-blog-item-down {
+        background: #F5F5F5;
+        height: 337px;
+        padding: 30px 40px 35px 35px;
+
+        @media screen and (max-width: $xs-max) {
+            padding: 10px 15px 20px 20px;
+            height: 175px;
+        }
+
+        @include flexbox;
+        @include flex-direction(column);
+
+        span {
+            display: block;
+            font-size: 11px;
+            line-height: 16px;
+            font-weight: 400;
+            color: $black;
+            padding-bottom: 40px;
+
+            @media screen and (max-width: $xs-max) {
+                padding-bottom: 15px;
+            }
+        }
+
+        h3 {
+            font-size: 25px;
+            line-height: 27px;
+            font-weight: 400;
+            color: $black;
+            padding-bottom: 20px;
+
+            @media screen and (max-width: $xs-max) {
+                font-size: 14px;
+                line-height: 18px;
+                padding-bottom: 10px;
+            }
+        }
+
+        p {
+            font-size: 13px;
+            line-height: 20px;
+            font-weight: 400;
+            color: $black;
+
+            @media screen and (max-width: $xs-max) {
+                font-size: 11px;
+                line-height: 16px;
+            }
+        }
+
+        a {
+            margin-top: auto;
+            margin-left: auto;
+            padding-right: 0;
+        }
+    }
+}
+
+.blog-small-slider {
+    width: 84%;
+    margin: 0 auto;
+    display: none;
+
+    @media screen and (max-width: 1330px) {
+        display: block;
+    }
+
+    .owl-nav {
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+
+        .owl-prev {
+            left: -12px;
+        }
+
+        .owl-next {
+            right: -20px;
+        }
+    }
+}
+
+/* ==========================================================================
+   End Of Blog Section
+   ========================================================================== */
+
+/* ==========================================================================
+   Boutique Section
+   ========================================================================== */
+
+.boutique-section {
+    background-image: url("../images/homepage/boutiques-section/background.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 65px;
+
+    @media screen and (max-width: $sm-max) {
+        padding-bottom: 35px;
+    }
+
+    .row {
+        @include flexbox;
+
+        margin-left: -20px;
+        margin-right: -20px;
+
+        @media screen and (max-width: $sm-max) {
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+
+        .col--6:first-of-type {
+            padding-right: 35px;
+            padding-left: 20px;
+
+            @media screen and (max-width: 1320px) {
+                padding-left: 50px;
+            }
+        }
+
+        .col--6:last-of-type {
+            padding-left: 35px;
+            padding-right: 20px;
+
+            @media screen and (max-width: 1320px) {
+                padding-right: 50px;
+            }
+        }
+
+        .col--sm-12 {
+            padding-left: 22.5px !important;
+            padding-right: 22.5px !important;
+
+            @media screen and (max-width: $xs-max) {
+                width: 300px;
+                margin: 0 auto;
+                padding: 0 !important;
+            }
+        }
+    }
+}
+
+.boutique-down-wrapper {
+    padding: 50px 40px 25px 40px;
+    background: $white;
+    position: relative;
+
+    .btn-dark {
+        position: absolute;
+        display: inline-block;
+        text-decoration: none;
+        background-color: black;
+        font-size: 16px;
+        line-height: 18px;
+        color: #a68f54 !important;
+        text-transform: uppercase;
+        padding: 15px 60px;
+        font-family: "Gotham";
+        border: 0;
+        -webkit-border-radius: 0 25px 25px 0;
+        -moz-border-radius: 0 25px 25px 0;
+        border-radius: 0 25px 25px 0;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        left: -20px;
+        top: -24px;
+        z-index: 5;
+
+        @media screen and (max-width: $sm-max) {
+            font-size: 14px;
+            line-height: 15px;
+            padding: 11px 60px 11px 30px;
+            left: -38px;
+            top: -20px
+        }
+    }
+
+    span {
+        font-size: 13px;
+        line-height: 20px;
+        font-weight: 400;
+        color: $black;
+        display: block;
+    }
+}
+
+.mobile-img-wrapper {
+    display: none;
+
+    @media screen and (max-width: $sm-max) {
+        display: block;
+    }
+}
+
+.boutique-mobile-slider {
+    .owl-nav {
+        top: 40%;
+        -webkit-transform: translateY(-40%);
+        transform: translateY(-40%);
+    }
+}
+
+.boutique-image-slider {
+    font-size: 0;
+
+    img {
+        width: 100%;
+    }
+
+    .owl-nav {
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+
+        .owl-prev {
+            left: -12px;
+        }
+
+        .owl-next {
+            right: -20px;
+        }
+    }
+}
+
+.boutique-slide-right {
+    &:after {
+        content: "Paradise Center";
+    }
+}
+
+.mobile-img-wrapper {
+    position: relative;
+
+    /*    &:after {
+            content: "Serdika Center";
+            position: absolute;
+            bottom: -24px;
+            display: inline-block;
+            text-decoration: none;
+            background-color: black;
+    
+            color: $gold !important;
+            text-transform: uppercase;
+    
+            font-family: "Gotham";
+            border: 0;
+            -webkit-border-radius: 0 25px 25px 0;
+            -moz-border-radius: 0 25px 25px 0;
+            border-radius: 0 25px 25px 0;
+            background-repeat: no-repeat;
+            cursor: pointer;
+    
+        }*/
+}
+
+/* ==========================================================================
+   End Of Boutique Section
+   ========================================================================== */
+
+/* ==========================================================================
+   Brand Section
+   ========================================================================== */
+
+.brand-section {
+    background: $black;
+    padding-bottom: 200px;
+    overflow: hidden;
+    position: relative;
+    background-image: url(../images/homepage/brand-section/lines-bg.svg);
+    background-position: top center;
+    background-repeat: repeat-x;
+    padding-top: 160px;
+
+    @media screen and (max-width: $sm-max) {
+        padding-bottom: 100px;
+        padding-top: 0;
+        background-size: 0;
+    }
+
+    .line-bg {
+        display: none;
+        @media screen and (max-width: $sm-max) {
+            max-height: 70px;
+            display: block;
+        }
+    }
+
+    .text-header {
+        padding: 0 0 55px;
+
+        @media screen and (max-width: $sm-max) {
+            padding: 0 0 25px;
+        }
+    }
+
+    .brand-slider {
+        @media screen and (max-width: 1280px) {
+            width: 95%;
+            margin: 0 auto;
+        }
+
+        .brand1 {
+            width: auto;
+            max-width: 100px;
+
+            @media screen and (max-width: $sm-max) {
+                width: auto;
+                max-width: 50px;
+            }
+        }
+
+        .brand2 {
+            width: auto;
+            max-width: 118px;
+
+            @media screen and (max-width: $sm-max) {
+                width: auto;
+                max-width: 45px;
+            }
+        }
+
+        .brand3 {
+            width: auto;
+            max-width: 247px;
+
+            @media screen and (max-width: $sm-max) {
+                max-width: 123px;
+                width: auto;
+            }
+        }
+
+        .brand4 {
+            width: auto;
+            max-width: 91px;
+
+            @media screen and (max-width: $sm-max) {
+                max-width: 46px;
+                width: auto;
+            }
+        }
+
+        .brand5 {
+            width: auto;
+            max-width: 82px;
+
+            @media screen and (max-width: $sm-max) {
+                max-width: 41px;
+                width: auto;
+            }
+        }
+
+        .brand6 {
+            width: auto;
+            max-width: 83px;
+
+            @media screen and (max-width: $sm-max) {
+                max-width: 42px;
+                width: auto;
+            }
+        }
+
+        .brand7 {
+            width: auto;
+            max-width: 133px;
+
+            @media screen and (max-width: $sm-max) {
+                max-width: 50px;
+                width: auto;
+            }
+        }
+    }
+
+    .owl-stage {
+        @include flexbox;
+        @include align-items(center);
+    }
+
+    .owl-dots {
+        padding-top: 40px;
+
+        @media screen and (max-width: $sm-max) {
+            padding-top: 25px;
+        }
+    }
+
+    .owl-nav {
+        position: absolute;
+        top: 12px;
+        width: 100%;
+
+        .owl-next {
+            right: -100px;
+
+            &:after {
+                content: "";
+                background: url("../images/homepage/brand-section/next-arrow.png");
+                width: 12px;
+                height: 20px;
+                background-repeat: no-repeat;
+            }
+        }
+
+        .owl-prev {
+            left: -100px;
+
+            &:after {
+                content: "";
+                background: url("../images/homepage/brand-section/prev-arrow.png");
+                width: 12px;
+                height: 20px;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+   End Of Brand Section
+   ========================================================================== */
+
+/* ==========================================================================
+   Newsletter Section
+   ========================================================================== */
+
+.newsletter-section {
+    position: relative;
+    margin-bottom: 20px;
+    margin-top: 20px;
+
+    &.home {
+        margin-top: -67px;
+        
+        @media screen and (max-width: $sm-max) {
+            margin-top: -60px;
+        }
+    } 
+
+
+    .newsletter-container {
+        background: $gold;
+
+        @media screen and (max-width: $sm-max) {
+            width: 95%;
+        }
+
+        .newsletter-wrapper {
+            padding-top: 50px;
+            padding-bottom: 50px;
+            max-width: 775px;
+            width: 100%;
+            margin: 0 auto;
+
+            @media screen and (max-width: $sm-max) {
+                padding-top: 20px;
+                padding-bottom: 15px;
+            }
+
+            form {
+                @include flexbox;
+                @include align-items(center);
+
+                @media screen and (max-width: $sm-max) {
+                    @include flex-direction(column);
+                }
+
+                .text-btn {
+                    @include letter-spacing(150);
+
+                    position: absolute;
+                    bottom: -16px;
+                    left: 0px;
+                    color: $white !important;
+                    padding-right: 0;
+                    font-size: 8px;
+                    line-height: 2px;
+                    font-weight: 400;
+                    border-color: $white !important;
+
+                    &:hover {
+                        border-color: $white !important;
+                    }
+
+                    @media screen and (max-width: $sm-max) {
+                        display: none;
+                    }
+                }
+
+                label {
+                    font-family: "Gotham";
+                    font-size: 17px;
+                    line-height: 18px;
+                    font-weight: 300;
+                    color: $white;
+                    margin-right: 20px;
+
+                    @media screen and (max-width: $sm-max) {
+                        margin-right: 0px;
+                        text-align: center;
+                        max-width: 240px;
+                        margin-bottom: 10px;
+                        font-size: 14px;
+                        line-height: 15px;
+                    }
+                }
+
+                input {
+                    font-family: "Gotham";
+                    padding: 10px 70px 10px 15px;
+                    font-size: 13px;
+                    font-weight: 300;
+                    line-height: 14px;
+                    width: 100%;
+                    width: 304px;
+                    border-radius: 0 25px 25px 0;
+                    border: none;
+                    color: #707070;
+
+                    @media screen and (max-width: $sm-max) {
+                        font-size: 11px;
+                        line-height: 12px;
+                    }
+                }
+
+                input[type=submit] {
+                    width: 70px;
+                    padding: 0;
+                    font-size: 10px;
+                    line-height: 11px;
+                    font-weight: 400;
+                    color: $gold;
+                    background: transparent;
+                    border: none;
+                    cursor: pointer;
+                    height: 34px;
+                    // z-index: 2;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                }
+
+                .email-form-wrapper {
+                    position: relative;
+
+                    span {
+                        display: none;
+                    }
+
+                    .verification-bullet {
+                        position: absolute;
+                        width: 6px;
+                        height: 6px;
+                        left: 2px;
+                        border-radius: 18px;
+                        top: 2px;
+                    }
+
+                    &.valid {
+                        .verification-bullet {
+                            background: #00AD3F;
+                        }
+                    }
+
+                    &.invalid {
+                        color: #FF0000;
+
+                        span {
+                            @include letter-spacing(150);
+
+                            display: block;
+                            font-size: 7px;
+                            font-weight: 400;
+                            line-height: 18px;
+                            color: $black;
+                            position: absolute;
+                            left: 2px;
+                            top: -14px;
+                        }
+
+                        .verification-bullet {
+                            background: #FF0000;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
