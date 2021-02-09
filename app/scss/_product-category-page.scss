@@ -98,6 +98,10 @@
 
             img {
                 width: 100%;
+
+                &:hover {
+                    @include box-shadow(5px 5px 7px rgba(0, 0, 0, 0.26));
+                }
             }
         }
     }

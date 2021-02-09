@@ -1824,3 +1824,20 @@ $(document).ready(function () {
 		$(targetValue).addClass('active');
 	});
 });
+
+// functionality for comments read more btn
+$('.comment-item-more a').each(function() {
+	$(this).on('click', function(e) {
+		e.preventDefault();
+		var $btnContainer = $(this).parent();
+		var $text = $btnContainer.prev();
+		// if( $text.is(":hidden") ) {
+		// 	$text.slideDown();
+		// } else {
+		// 	$text.slideUp();
+		// }
+		$btnContainer.toggleClass('reverse');
+		$text.toggleClass('is_open');
+
+	});
+});

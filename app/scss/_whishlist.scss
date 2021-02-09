@@ -30,3 +30,11 @@
         }
     }
 }
+
+.category-products.category-products--search {
+    .add-to-wishlist-link {
+        &::after {
+            background-image: url(../images/shop-grid/wishlist-hover.svg) !important;
+        }
+    }
+}
