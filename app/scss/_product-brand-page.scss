@@ -228,6 +228,14 @@
     padding-bottom: 0;
 }
 
+.category-products.brand-products {
+    padding: 40px 25px 30px 25px;
+
+    @media screen and (max-width: $md-max) {
+        padding: 10px 0 30px;
+    }
+}
+
 .brand-entree-wrapper {
     @media screen and (max-width: $md-max) and (min-width: $sm-max) {
         margin-top: 15px;
@@ -274,6 +282,7 @@
 
             .owl-stage-outer {
                 @media screen and (max-width: $xs-max) {
+                    overflow: visible;
                     transform: translate3d(-49px, 0px, 0px) !important;
                     -webkit-transform: translate3d(-49px, 0px, 0px) !important;
                 }

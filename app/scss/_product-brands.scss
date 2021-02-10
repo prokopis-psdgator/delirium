@@ -4,7 +4,7 @@ html {
 
 .brands-list {
     .top-brands {
-        .container {
+        .container-shop {
             @media screen and (max-width: $sm-max) {
                 padding-left: 4px;
                 padding-right: 4px;
@@ -39,7 +39,7 @@ html {
     }
 
     .brands-A-Z-wrapper {
-        .container {
+        .container-shop {
             padding-left: 15px;
             padding-right: 15px;
         }
@@ -53,6 +53,7 @@ html {
                 margin-right: 15px;
                 font-size: 25px;
                 line-height: 35px;
+                font-weight: 500;
                 color: $black;
                 cursor: pointer;
 
