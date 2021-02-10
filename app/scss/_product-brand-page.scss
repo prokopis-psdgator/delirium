@@ -219,7 +219,9 @@
         }
     }
 }
-
+.category-products .container-shop .product-gallery .mobile-bar .mobile-breadcrumbs .child-category.is_active{
+    color: $gold;
+}
 .category-products.brand-products .container-shop .product-gallery {
     width: 75%;
 }
@@ -234,6 +236,16 @@
     @media screen and (max-width: $md-max) {
         padding: 10px 0 30px;
     }
+}
+
+.category-products.brand-products .category-submenu li a {
+    text-transform: capitalize;
+}
+
+.category-products.brand-products .category-submenu {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #000;
+    margin-bottom: 30px;
 }
 
 .brand-entree-wrapper {

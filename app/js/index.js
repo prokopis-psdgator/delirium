@@ -1792,7 +1792,7 @@ $(document).ready(function () { //edited
 /* ==========================================================================
 	Brand List  Masonry Layout
 ========================================================================== */
-
+/*
 $(document).ready(function () {
 	if ($('.masonry-layout-wrapper').length) {
 		$('.masonry-layout-wrapper').masonry({
@@ -1805,20 +1805,20 @@ $(document).ready(function () {
 		});
 	}
 });
-
+*/
 /* ==========================================================================
 	Brand List  Activate On Click
 ========================================================================== */
 
 $(document).ready(function () {
-	$('.brands-inline a').on('click',function (e) {
+	$('.brands-inline span a').on('click',function (e) {
 		e.preventDefault();
 		$('.brands-inline a').removeClass('active');
 		$(e.target).addClass('active');
 
 		targetValue = e.target.getAttribute("href");
-		
-		$('html, body').animate({scrollTop:$(targetValue).position().top + 500});
+		console.log('eere');
+		$('html, body').animate({scrollTop:$(targetValue).position().top + 100});
 
 		$('.brand-item').removeClass('active');
 		$(targetValue).addClass('active');

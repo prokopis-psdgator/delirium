@@ -84,6 +84,14 @@ html {
                 margin-top: 55px;
             }
 
+            .row {
+                margin-bottom: 60px;
+
+                @media screen and (max-width: $sm-max) {
+                    margin-bottom: 50px;
+                }
+            }
+
             .brand-item::before {
                 display: block;
                 content: " ";
@@ -99,13 +107,6 @@ html {
 
             .brand-item {
                 color: $black;
-                width: calc(25% - 15px);
-                margin-bottom: 60px;
-
-                @media screen and (max-width: $sm-max) {
-                    width: 100%;
-                    margin-bottom: 50px;
-                }
 
                 h3 {
                     font-size: 78px;
@@ -127,7 +128,8 @@ html {
                             color: $black;
                             text-decoration: none;
                             text-transform: uppercase;
-                            &:hover{
+
+                            &:hover {
                                 color: $gold;
                             }
                         }
