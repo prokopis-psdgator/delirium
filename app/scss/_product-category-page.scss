@@ -4,6 +4,9 @@
 
 .category-submenu {
     list-style: none;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #000;
+    margin-bottom: 30px;
 
     li:first-of-type {
         margin-bottom: 25px;
@@ -12,6 +15,7 @@
             font-size: 13px;
             font-weight: 500;
             line-height: 14px;
+            text-transform: uppercase;
 
             @include letter-spacing(50);
         }
@@ -24,7 +28,11 @@
             font-weight: 400;
             line-height: 25px;
             color: $black;
-            text-transform: uppercase;
+            text-transform: capitalize;
+    
+            &:hover {
+                color: $gold;
+            }
         }
     }
 

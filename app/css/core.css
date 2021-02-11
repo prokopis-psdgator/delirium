@@ -9295,13 +9295,17 @@ textarea.textarea-style {
    Category Page
    ========================================================================== */
 .category-submenu {
-  list-style: none; }
+  list-style: none;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #000;
+  margin-bottom: 30px; }
   .category-submenu li:first-of-type {
     margin-bottom: 25px; }
     .category-submenu li:first-of-type a {
       font-size: 13px;
       font-weight: 500;
       line-height: 14px;
+      text-transform: uppercase;
       letter-spacing: 0.05em; }
   .category-submenu li a {
     text-decoration: none;
@@ -9309,7 +9313,9 @@ textarea.textarea-style {
     font-weight: 400;
     line-height: 25px;
     color: #000;
-    text-transform: uppercase; }
+    text-transform: capitalize; }
+    .category-submenu li a:hover {
+      color: #a68f54; }
   .category-submenu li.is_active a {
     color: #a68f54; }
 
@@ -9549,6 +9555,9 @@ textarea.textarea-style {
     .category-products.brand-products {
       padding: 10px 0 30px; } }
 
+.category-products.brand-products .category-submenu li:first-of-type a {
+  text-transform: uppercase; }
+
 .category-products.brand-products .category-submenu li a {
   text-transform: capitalize; }
   .category-products.brand-products .category-submenu li a:hover {
@@ -9738,7 +9747,7 @@ html {
     margin-bottom: 60px; }
     @media screen and (max-width: 767px) {
       .brands-list .brands-A-Z-wrapper .masonry-layout-wrapper .row {
-        margin-bottom: 50px; } }
+        margin-bottom: 0px; } }
     .brands-list .brands-A-Z-wrapper .masonry-layout-wrapper .row .col:first-of-type {
       padding-left: 0px; }
       @media screen and (max-width: 1625px) {

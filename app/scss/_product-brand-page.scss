@@ -248,11 +248,20 @@
     }
 }
 
-.category-products.brand-products .category-submenu li a {
-    text-transform: capitalize;
+.category-products.brand-products .category-submenu li {
 
-    &:hover {
-        color: $gold;
+    &:first-of-type {
+        a {
+            text-transform: uppercase;
+        }
+    }
+
+    a {
+        text-transform: capitalize;
+    
+        &:hover {
+            color: $gold;
+        }
     }
 }
 
