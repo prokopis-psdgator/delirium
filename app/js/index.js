@@ -1930,3 +1930,15 @@ $("#pop-email-validate").on("click", validatePopEmail);
 $('#pop-email').on('input', function (e) {
 	validatePopEmail(e.target.value);
 });
+
+
+////
+$(document).ready(function () {
+	var subMenuDropdowns = document.querySelectorAll(".sub-menu-dropdown");
+	
+	for (let i=0; i<subMenuDropdowns.length; i++) {
+		actualMinHeight = subMenuDropdowns[i].firstElementChild.offsetHeight;
+		subMenuDropdowns[i].style.minHeight = (actualMinHeight+70) + "px";
+	}
+
+});

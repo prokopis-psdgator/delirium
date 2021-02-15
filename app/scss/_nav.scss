@@ -5,25 +5,29 @@
 .nav-menu {
     li:hover {
         font-weight: 500;
+        @include transition(all 300ms);
 
         .sub-menu-dropdown {
             /*                display: block;*/
             /*                @include transform(translate3d(0,0,0) translateZ(-10px));*/
+            visibility: visible;
             opacity: 1;
             min-height: 370px;
             height: 100%;
-            padding-top: 31px;
             margin-top: 116px;
+            padding-top: 30px;
         }
 
         .sub-menu-dropdown.bigger-dropdown {
-            min-height: 380px;
+            // min-height: 380px;
         }
     }
 }
 
 .sub-menu-dropdown {
     /*    display: none;*/
+    visibility: hidden;
+    padding-top: 30px;
 
     @include transition-duration(0.3s);
 
@@ -35,7 +39,7 @@
     background-color: $gray-background;
 
     // padding-bottom: 53px;
-    max-height: 382px;
+    // max-height: 382px;
     height: 100%;
     position: absolute;
     top: 0;

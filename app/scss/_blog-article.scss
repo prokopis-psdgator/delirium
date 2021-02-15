@@ -39,6 +39,20 @@
 
     .tags {
       @include order(3);
+      position: relative;
+      padding-left: 25px;
+
+      &::before {
+        content: "Tags";
+        position: absolute;
+        color: #000;
+        text-transform: uppercase;
+        font-size: 10px;
+        font-weight: 400;
+        @include letter-spacing(150);
+        left: 0;
+        top: 5px;
+      }
 
       @media screen and (max-width: $lg-over-max) {
         padding-right: 25px;
@@ -46,18 +60,15 @@
       
       @media screen and (max-width: $sm-max) {
         padding-left: 25px;
-      }
-
-      span {
-        color: #000;
-        text-transform: uppercase;
-        font-size: 10px;
-        font-weight: 400;
-        @include letter-spacing(150);
+        margin-left: 25px;
       }
 
       a {
         margin-left: 20px;
+
+        @media screen and (max-width: $sm-max) {
+          margin-bottom: 10px;
+        }
       }
     }
   }
