@@ -6,6 +6,10 @@
 
     .blog-small-item-wrapper {
         max-width: 100%;
+
+        &:hover {
+            @include box-shadow(0 0 6px rgba(0, 0, 0, 0.26));
+        }
     }
 
     .row:not(:last-of-type) {
