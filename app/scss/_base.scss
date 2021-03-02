@@ -423,7 +423,13 @@ p {
 section.breadcrumbs {
     background-color: #000;
     height: 40px;
-    line-height: 36px;
+    // line-height: 36px; /* 25/2/21 */
+    @include flexbox; /* 25/2/21 */
+    @include align-items(center); /* 25/2/21 */
+
+    @media screen and (max-width: 1625px) { /* 25/2/21 */
+        padding-left: 25px; /* 25/2/21 */
+    } /* 25/2/21 */
 
     &.light {
         background-color: #fff;
@@ -466,7 +472,7 @@ section.breadcrumbs {
 
         &:first-child {
             @media screen and (max-width: $lg-over-max) {
-                margin-left: 25px;
+                // margin-left: 25px;  /* 25/2/21 */
             }
         }
     }

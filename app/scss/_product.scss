@@ -526,9 +526,18 @@
     }
   }
 
+  .product-att-right { /* 25/2/21 */
+    @media screen and (max-width: $sm-max) { /* 25/2/21 */
+      @include flex-grow(1); /* 25/2/21 */
+      padding-right: 35px ; /* 25/2/21 */
+    } /* 25/2/21 */
+  } /* 25/2/21 */
+
+
   &.product-att--color {
     .product-att-right {
       @include flexbox();
+      @include flex-wrap(wrap); /* 25/2/21 */
 
       @media screen and (max-width: $md-max) {
         @include flex-wrap(wrap);
@@ -541,8 +550,9 @@
     }
 
     .color-circles-wrapper {
-      margin-left: 23px;
-      max-width: 350px;
+      // margin-left: 23px; /* 25/2/21 */
+      max-width: 380px; /* 25/2/21 */
+      margin-top: 20px; /* 25/2/21 */
 
       @media screen and (max-width: $md-max) {
         margin-left: 0;
@@ -593,7 +603,7 @@
     @media screen and (min-width: $sm-max) {
       .custom-dropdown {
         cursor: auto;
-        // width: 110px; //removed
+        @include flex-basis(100%); /* 25/2/21 */
         text-align: left;
         .custom-dropdown-value {
           background: none;
@@ -728,9 +738,11 @@
     @media screen and (max-width: $sm-max) {
       @include flexbox();
       @include justify-content(space-between);
+      @include flex-wrap(wrap); /* 25/2/21 */
 
       .product-att {
         @include align-items(center);
+        @include flex-basis(100%); /* 25/2/21 */
         .product-att-left {
           @include flex(1);
           padding-right: 25px;
@@ -1049,6 +1061,12 @@
       @include letter-spacing(200);
     }
 
+    
+    .product-box_details {  /* 25/2/21 */
+        margin-bottom: 20px;  /* 25/2/21 */
+        min-height: 80px;  /* 25/2/21 */
+    }  /* 25/2/21 */
+
     h3 {
       display: block;
       font-size: 13px;
@@ -1056,6 +1074,10 @@
       line-height: 17px;
       margin-bottom: 12px;
       text-transform: uppercase;
+      min-height: 50px; /* 25/2/21 */
+      @include flexbox; /* 25/2/21 */
+      @include flex-direction(column); /* 25/2/21 */
+      @include justify-content(center); /* 25/2/21 */
     }
 
     p {
@@ -1856,3 +1878,8 @@ a.hover--dark {
     }
   }
 }
+
+
+.fancybox-infobar { /* 25/2/21 */
+  display: none; /* 25/2/21 */
+} /* 25/2/21 */
