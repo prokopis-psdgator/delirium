@@ -13,21 +13,21 @@
    ========================================================================== */
 
 .home-hero.with-background-cover {
-    .owl-item div {
-        height: 650px;
+    // .owl-item div {
+    //     height: 650px;
 
-        @media screen and (max-width: $lg-max) {
-            height: 600px;
-        }
+    //     @media screen and (max-width: $lg-max) {
+    //         height: 600px;
+    //     }
 
-        @media screen and (max-width: $md-max) {
-            height: 450px;
-        }
+    //     @media screen and (max-width: $md-max) {
+    //         height: 450px;
+    //     }
 
-        @media screen and (max-width: $sm-max) {
-            height: 350px;
-        }
-    }
+    //     @media screen and (max-width: $sm-max) {
+    //         height: 350px;
+    //     }
+    // }
 
     .owl-dots {
         @include flexbox;
@@ -781,38 +781,42 @@
    ========================================================================== */
 
 .limited-edition-section {
-    background: url("../images/homepage/limited-edition-section/background.svg");
-    text-align: center;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    padding: 392px 0 178px;
-    position: relative;
+    // background: url("../images/homepage/limited-edition-section/background.svg");
+    // text-align: center;
+    // background-repeat: no-repeat;
+    // background-position: center;
+    // background-size: cover;
+    // padding: 392px 0 178px;
+    // position: relative;
 
-    @media screen and (max-width: $lg-max) {
-        padding: 320px 0 100px;
-    }
+    // @media screen and (max-width: $lg-max) {
+    //     padding: 320px 0 100px;
+    // }
 
-    @media screen and (max-width: $md-max) {
-        padding: 270px 0 50px;
-    }
+    // @media screen and (max-width: $md-max) {
+    //     padding: 270px 0 50px;
+    // }
 
-    @media screen and (max-width: $xs-max) {
-        padding: 0;
-        height: 300px;
-        background: url("../images/homepage/limited-edition-section/background-mobile.svg");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-    }
+    // @media screen and (max-width: $xs-max) {
+    //     padding: 0;
+    //     height: 300px;
+    //     background: url("../images/homepage/limited-edition-section/background-mobile.svg");
+    //     background-repeat: no-repeat;
+    //     background-position: center;
+    //     background-size: cover;
+    // }
 
-    .btn-dark {
-        @media screen and (max-width: $xs-max) {
-            position: absolute;
-            right: 11%;
-            bottom: 21%;
-            padding: 10px 58.4px;
-        }
+    // .btn-dark {
+    //     @media screen and (max-width: $xs-max) {
+    //         position: absolute;
+    //         right: 11%;
+    //         bottom: 21%;
+    //         padding: 10px 58.4px;
+    //     }
+    // }
+
+    img {
+        width: 100%;
     }
 }
 

@@ -1928,18 +1928,6 @@ header {
 /* ==========================================================================
    Hero Section
    ========================================================================== */
-.home-hero.with-background-cover .owl-item div {
-  height: 650px; }
-  @media screen and (max-width: 1199px) {
-    .home-hero.with-background-cover .owl-item div {
-      height: 600px; } }
-  @media screen and (max-width: 991px) {
-    .home-hero.with-background-cover .owl-item div {
-      height: 450px; } }
-  @media screen and (max-width: 767px) {
-    .home-hero.with-background-cover .owl-item div {
-      height: 350px; } }
-
 .home-hero.with-background-cover .owl-dots {
   display: -webkit-box;
   display: -moz-box;
@@ -2543,34 +2531,8 @@ header {
 /* ==========================================================================
    Limited Edition Section
    ========================================================================== */
-.limited-edition-section {
-  background: url("../images/homepage/limited-edition-section/background.svg");
-  text-align: center;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  padding: 392px 0 178px;
-  position: relative; }
-  @media screen and (max-width: 1199px) {
-    .limited-edition-section {
-      padding: 320px 0 100px; } }
-  @media screen and (max-width: 991px) {
-    .limited-edition-section {
-      padding: 270px 0 50px; } }
-  @media screen and (max-width: 575px) {
-    .limited-edition-section {
-      padding: 0;
-      height: 300px;
-      background: url("../images/homepage/limited-edition-section/background-mobile.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover; } }
-  @media screen and (max-width: 575px) {
-    .limited-edition-section .btn-dark {
-      position: absolute;
-      right: 11%;
-      bottom: 21%;
-      padding: 10px 58.4px; } }
+.limited-edition-section img {
+  width: 100%; }
 
 /* ==========================================================================
    End Of Limited Edition Section
