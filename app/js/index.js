@@ -579,7 +579,7 @@ document.addEventListener(
 				{
 					"position": "bottom",
 					"content": [
-						'<div class="cart-buttons"><div class="cart-buttons__back"><a href="#" class="text-btn">My Cart</a><a href="#" class="text-btn">Continue Shopping</a></div><a href="#" class="btn-dark">Checkout</a></div>'
+						'<div class="cart-buttons"><a href="#" class="btn-dark">Checkout</a><a href="#" class="text-btn">Continue Shopping</a></div>'
 					],
 				}
 			]

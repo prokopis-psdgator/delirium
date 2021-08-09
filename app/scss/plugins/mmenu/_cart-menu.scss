@@ -64,14 +64,14 @@
                 align-items: center;
 
                 .cart-header_left {
-                    font-size: 15px;
+                    font-size: 16px;
                     color: $black;
-                    font-weight: 500;
+                    font-weight: 600;
                     text-transform: uppercase;
                 }
 
                 .cart-header_right {
-                    font-size: 14px;
+                    font-size: 16px;
                     color: $gold;
                     font-weight: 400;
                     text-transform: uppercase;
@@ -97,93 +97,103 @@
         border-bottom: 1px solid #a68f54;
     }
 
-    .cart-item {
+    .cart-item { // 9-8-21
         position: relative;
         display: flex;
         justify-content: space-between;
+        align-items: flex-start;
 
         .remove-cart-item {
+            position: absolute;
+            right: 0;
+            bottom: 0;
             img {
-                height: 9px;
-                max-width: 9px;
+                height: 12px;
+                max-width: 12px;
             }
         }
 
-        img {
-            max-width: 100%;
+        & > img {
+            max-width: 70px;
             height: auto;
         }
 
         .cart-item__info {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
 
             .cart-item__title {
                 width: 100%;
                 flex: 0 0 100%;
-                font-size: 11px;
-                font-weight: 600;
+                font-size: 12px;
+                font-weight: 700;
+                margin-bottom: 10px;
                 text-transform: uppercase;
                 color: $black;
+                white-space: normal;
             }
 
             .cart-item__desc {
                 width: 100%;
                 flex: 0 0 100%;
                 font-size: 12px;
-                font-weight: 400;
+                font-weight: 500;
+                margin-bottom: 10px;
                 text-transform: uppercase;
                 color: $black;
-            }
-
-            .cart-item__desc {
-                width: 100%;
-                flex: 0 0 100%;
-
-                span {
-                    display: block;
-                }
+                white-space: normal;
+                max-width: 220px;
             }
 
             .cart-item__quantity-edit {
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                width: 100%;
+                flex: 0 0 100%;
+                @include flexbox;
+                @include justify-content(flex-start);
+                @include align-items(center);
                 gap: 10px;
                 font-size: 15px;
-                font-weight: 400;
+                font-weight: 300;
 
                 span {
-                    font-weight: 400;
-                    font-size: 15px;
+                    font-weight: 300;
+                    font-size: 18px;
                     color: $black;
                     text-transform: uppercase;
                 }
 
                 a {
                     font-weight: 400;
-                    font-size: 15px;
+                    font-size: 24px;
                     color: #848484;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 34px;
+                    width: 34px;
+                    border: 1px solid #f3f3f3;
                 }
             }
 
             .cart-item__price {
                 display: flex;
-                flex-direction: column;
+                width: 100%;
+                flex: 0 0 100%;
+                position: relative;
+                margin-bottom: 15px;
 
                 .starting-price {
                     color: $gold;
                     text-decoration: line-through;
-                    font-size: 15px;
-                    font-weight: 400;
+                    font-size: 14px;
+                    font-weight: 700;
+                    margin-right: 30px;
                 }
 
                 .final-price {
                     color: $black;
-                    font-size: 15px;
-                    font-weight: 500;
+                    font-size: 14px;
+                    font-weight: 700;
                 }
             }
         }
@@ -196,21 +206,24 @@
             flex-direction: column;
         }
 
-        .cart-cost {
+        .cart-cost { // 9-8-21
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 0 15px;
 
             span:first-of-type {
-                font-size: 14px;
-                font-weight: 400;
+                font-size: 12px;
+                font-weight: 500;
                 color: $black;
+                flex-basis: 65%;
+                text-align: left;
+                border-right: 1px solid $gold;
             }
 
             span:last-of-type {
-                font-size: 15px;
-                font-weight: 400;
+                font-size: 16px;
+                font-weight: 700;
                 color: $black;
             }
 
@@ -218,33 +231,39 @@
                 border-top: 1px solid $gold;
 
                 span:first-of-type {
-                    font-weight: 600;
+                    font-weight: 500;
                 }
 
                 span:last-of-type {
-                    font-weight: 500;
+                    font-weight: 700;
                 }
             }
         }
 
-        .cart-buttons {
+        .cart-buttons {  // 9-8-21
             display: flex;
+            flex-direction: column;
             justify-content: space-between;
             align-items: center;
-            margin-top: 45px;
+            margin-top: 30px;
 
-            .cart-buttons__back {
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-            }
+            // .cart-buttons__back {
+            //     display: flex;
+            //     flex-direction: column;
+            //     align-items: flex-start;
+            // }
 
             .btn-dark {
                 padding: 10px 40px;
+                width: 100%;
+                margin-bottom: 30px;
+                font-size: 14px;
             }
 
             .text-btn {
                 padding-bottom: 1px;
+                font-size: 12px;
+                font-weight: 500;
             }
         }
     }

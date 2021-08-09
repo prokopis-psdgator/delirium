@@ -129,6 +129,28 @@
         color: $black!important;
         border-color: $black;
     }
+
+    &--black { // 9-8-21
+        color: $black !important;
+        border-bottom: 1px solid $black;
+
+        &:hover {
+            border-bottom: 0;
+        }
+    }
+
+    &--big { // 9-8-21
+        font-size: 14px;
+    }
+
+    &--no-caps { // 9-8-21
+        text-transform: none;
+    }
+
+    &--no-letter-spacing { // 9-8-21
+        letter-spacing: normal;
+    }
+
 }
 
 .btn {
@@ -171,6 +193,10 @@
 body {
     font-family: "Gotham";
     font-weight: 400;
+
+    &.mm-wrapper_opened {
+        overflow-y: hidden !important; // 9-8-21
+    }
 }
 
 
