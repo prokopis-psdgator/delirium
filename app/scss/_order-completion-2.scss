@@ -1,0 +1,341 @@
+/* ==========================================================================
+   Order Completion Page ( 2nd Design )
+   ========================================================================== */
+.user-option {
+  @include flexbox;
+  @include align-items(center);
+  border-bottom: 1px solid $gold;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  @media screen and (max-width: $sm-max) {
+    @include flex-direction(column);
+    @include align-items(flex-start);
+    gap: 20px;
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+  }
+}
+
+.user-checkbox {
+  @include flexbox;
+  @include align-items(center);
+  margin-left: 30px;
+  position: relative;
+  @media screen and (max-width: $sm-max) {
+    margin-left: 0;
+  }
+
+  label {
+    font-size: 24px;
+    font-weight: 400;
+    color: $black;
+    cursor: pointer;
+    padding-left: 10px;
+    @include letter-spacing(10);
+    @include flexbox;
+
+    @media screen and (max-width: $sm-max) {
+        font-size: 12px;
+    }
+
+    img {
+      margin-left: 10px;
+    }
+  }
+
+  input {
+    opacity: 0;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    cursor: pointer;
+    z-index: 11;
+
+    &:checked {
+      ~ .check {
+        border-color: $white;
+
+        @include box-shadow(0px 0px 0px 15px $gold inset);
+
+        &::after {
+          opacity: 1;
+
+          @include transform(scale(1));
+        }
+      }
+    }
+  }
+
+  .check {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    @include flexbox;
+    @include justify-content(center);
+    @include align-items(center);
+    @include border-radius(100px);
+    @include flex-shrink(0);
+    background-color: $white;
+    border: 4px solid $white;
+    @include box-shadow(0px 0px 0px 0px $gold inset);
+
+    transition: all 0.15s cubic-bezier(0, 1.05, 0.72, 1.07);
+
+    &::after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      z-index: 4;
+      position: absolute;
+
+      @include transform(scale(0));
+      @include background-size(50%);
+
+      background-image: url("http://s6.picofile.com/d/8392306668/c38c12a0-6db3-47d4-a80c-7dad8fab5186/checkmark.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      transition-delay: 0.2s !important;
+      transition: all 0.25s cubic-bezier(0, 1.05, 0.72, 1.07);
+    }
+
+    &::before {
+      content: "";
+      width: 20px;
+      height: 20px;
+      opacity: 1;
+      z-index: 4;
+      position: absolute;
+      @include border-radius(50%);
+      border: 1px solid #707070;
+      left: -4px;
+      top: -4px;
+    }
+  }
+
+  &--sidebar {
+    margin-left: 0;
+    margin-bottom: 20px;
+    @include align-items(flex-start);
+
+    label {
+      font-size: 18px;
+      @media screen and (max-width: $sm-max) {
+          font-size: 12px;
+      }
+    }
+  }
+}
+
+.user-option-title {
+  font-size: 24px;
+  color: $black;
+  @include letter-spacing(50);
+  font-weight: 700;
+  @media screen and (max-width: $sm-max) {
+    font-size: 12px;
+  }
+}
+
+.working-hours {
+  color: $black;
+  font-weight: 400;
+  font-size: 18px;
+  @include letter-spacing(10);
+  margin-bottom: 70px;
+
+  @media screen and (max-width: $sm-max) {
+    font-size: 12px;
+    margin-bottom: 25px;
+  }
+
+  a {
+    color: $black;
+    font-weight: 400;
+    text-decoration: none;
+
+    @media screen and (max-width: $sm-max) {
+      font-size: 12px;
+    }
+  }
+}
+
+.form-title {
+  color: $black;
+  font-size: 24px;
+  font-weight: 700;
+  @include letter-spacing(50);
+  margin-bottom: 70px;
+  text-transform: uppercase;
+
+  @media screen and (max-width: $sm-max) {
+      font-size: 12px;
+      margin-bottom: 25px;
+  }
+
+  &--delivery-note {
+    position: relative;
+    &::after {
+      content: "Доставките се извършват от Speedy";
+      position: absolute;
+      font-size: 12px;
+      left: 0;
+      top: calc(100% + 10px);
+      font-weight: 400;
+      @include letter-spacing(0);
+      text-transform: none;
+      @media screen and (max-width: $sm-max) {
+        position: relative;
+        display: block;
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+.form-checkbox {
+  @include flexbox;
+  @include align-items(center);
+
+  label {
+    text-decoration: none;
+    color: $black;
+    font-size: 12px;
+    font-weight: 400;
+    cursor: pointer;
+    padding-left: 15px;
+  }
+
+  input {
+    opacity: 0;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    cursor: pointer;
+    z-index: 11;
+
+    &:checked {
+      ~ .check {
+        border-color: $gold;
+
+        @include box-shadow(0px 0px 0px 15px $gold inset);
+
+        &::after {
+          opacity: 1;
+
+          @include transform(scale(1));
+        }
+      }
+    }
+  }
+
+  .check {
+    width: 20px;
+    height: 20px;
+    @include flex-shrink(0);
+
+    @include flexbox;
+    @include justify-content(center);
+    @include align-items(center);
+
+    position: relative;
+    background-color: #fff;
+    border: 1px solid $gray-background;
+
+    @include box-shadow(0px 0px 0px 0px $gold inset);
+
+    transition: all 0.15s cubic-bezier(0, 1.05, 0.72, 1.07);
+
+    &::after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      z-index: 4;
+      position: absolute;
+
+      @include transform(scale(0));
+      @include background-size(50%);
+
+      background-image: url("http://s6.picofile.com/d/8392306668/c38c12a0-6db3-47d4-a80c-7dad8fab5186/checkmark.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      transition-delay: 0.2s !important;
+      transition: all 0.25s cubic-bezier(0, 1.05, 0.72, 1.07);
+    }
+  }
+
+  &--sidebar {
+    margin-bottom: 20px;
+    @include align-items(flex-start);
+
+    label {
+      font-size: 18px;
+      font-weight: 400;
+      color: $black;
+      @media screen and (max-width: $sm-max) {
+          font-size: 12px;
+      }
+    }
+
+    .check {
+      background-color: #fff;
+      border: 1px solid $black;
+    }
+  }
+
+  &--last {
+    margin-bottom: 40px;
+    @media screen and (max-width: $sm-max) {
+        margin-bottom: 25px;
+    }
+  }
+}
+
+#create-account-wrapper,
+#order-comments-wrapper,
+#invoice-fields-wrapper {
+  display: none;
+}
+
+#invoice-fields-wrapper {
+  .form-group:last-child {
+    margin-bottom: 20px;
+  }
+}
+
+.cart-forms-wrapper {
+  @include flexbox;
+  @include align-items(flex-start);
+  @include justify-content(space-between);
+  gap: 50px;
+
+  @media screen and (max-width: $md-max) {
+    @include flex-direction(column);
+    gap: 25px;
+  }
+}
+
+.personal-info-form-wrapper,
+.billing-address-form-wrapper {
+  @include flex-grow(1);
+  
+  @media screen and (max-width: $md-max) {
+    width: 100%;
+  }
+}
+
+.payment-method-title {
+  font-weight: 700;
+  font-size: 24px;
+  text-align: center;
+  @include letter-spacing(50);
+  margin-bottom: 50px;
+  text-transform: uppercase;
+
+  @media screen and (max-width: $sm-max) {
+      font-size: 12px;
+      text-align: left;
+      margin-bottom: 25px;
+  }
+}

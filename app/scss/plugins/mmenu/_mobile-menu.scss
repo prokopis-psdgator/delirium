@@ -1,6 +1,7 @@
 /* ==========================================================================
    MMENU
    ========================================================================== */
+#cart-burger-menu, //10-8-21
 #burger-menu {
     .mm-navbar {
 
@@ -76,7 +77,7 @@
 
             &::before {
                 content: "";
-                background-image: url(../../../images/header/menu/rose.svg);
+                background-image: url(../images/header/menu/rose.svg);
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: cover;

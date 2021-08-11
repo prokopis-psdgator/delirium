@@ -172,4 +172,12 @@
     &.open {
         background-image: url(../images/header/close-menu.svg);
     }
+
+    &--cart { //10-8-21
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        @include translateY(-50%);
+    }
 }

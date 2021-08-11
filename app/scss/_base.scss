@@ -129,26 +129,21 @@
         color: $black!important;
         border-color: $black;
     }
-
-    &--black { // 9-8-21
+    
+    &--alt { // 10/8/21
         color: $black !important;
-        border-bottom: 1px solid $black;
+        text-decoration: underline;
+        text-transform: none;
+        font-size: 14px;
+        @include letter-spacing(15);
+        font-weight: 500;
+        border: 0;
+        padding: 0;
+        margin: 0;
 
         &:hover {
-            border-bottom: 0;
+            text-decoration: none;
         }
-    }
-
-    &--big { // 9-8-21
-        font-size: 14px;
-    }
-
-    &--no-caps { // 9-8-21
-        text-transform: none;
-    }
-
-    &--no-letter-spacing { // 9-8-21
-        letter-spacing: normal;
     }
 
 }
@@ -210,6 +205,13 @@ body {
 
     &-shop {
         max-width: 1590px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    &--cart {
+        max-width: 1750px;
+        padding: 0 25px;
         width: 100%;
         margin: 0 auto;
     }
@@ -503,3 +505,67 @@ section.breadcrumbs {
         }
     }
 } 
+
+// Helper classes
+.hidden { // 10 - 8 - 21
+	&--lg-over {
+		&-up {
+			@media screen and (min-width: $lg-over-max) {
+				display: none !important;
+			}
+		}
+		&-down {
+			@media screen and (max-width: $lg-over-max - 0.1px) {
+				display: none !important;
+			}
+		}
+	}
+	&--lg {
+		&-up {
+			@media screen and (min-width: $lg-max) {
+				display: none !important;
+			}
+		}
+		&-down {
+			@media screen and (max-width: $lg-max - 0.1px) {
+				display: none !important;
+			}
+		}
+	}
+	&--md {
+		&-up {
+			@media screen and (min-width: $md-max) {
+				display: none !important;
+			}
+		}
+		&-down {
+			@media screen and (max-width: $md-max - 0.1px) {
+				display: none !important;
+			}
+		}
+	}
+	&--sm {
+		&-up {
+			@media screen and (min-width: $sm-max) {
+				display: none !important;
+			}
+		}
+		&-down {
+			@media screen and (max-width: $sm-max - 0.1px) {
+				display: none !important;
+			}
+		}
+	}
+	&--xs {
+		&-up {
+			@media screen and (min-width: $xs-max) {
+				display: none !important;
+			}
+		}
+		&-down {
+			@media screen and (max-width: $xs-max - 0.1px) {
+				display: none !important;
+			}
+		}
+	}
+}

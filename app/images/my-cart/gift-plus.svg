@@ -1,0 +1,8 @@
+<svg 
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="25px" height="25px">
+<path fill-rule="evenodd"  fill="rgb(166, 143, 84)"
+ d="M12.281,0.906 C18.909,0.906 24.281,6.279 24.281,12.906 C24.281,19.534 18.909,24.906 12.281,24.906 C5.654,24.906 0.281,19.534 0.281,12.906 C0.281,6.279 5.654,0.906 12.281,0.906 Z"/>
+<text kerning="auto" font-family="Myriad Pro" fill="rgb(0, 0, 0)" transform="matrix( 1.38457330723403, 0, 0, 1.38457330723403,6.44370731806976, 21.3012092635216)" font-size="17.334px"><tspan font-size="17.334px" font-family="Montserrat" fill="#FFFFFF">&#43;</tspan></text>
+</svg>

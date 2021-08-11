@@ -532,6 +532,43 @@ document.addEventListener(
 		
 	}
 );
+/* ==========================================================================
+   Initialize Main Menu for cart
+   ========================================================================== */
+document.addEventListener(
+	"DOMContentLoaded", () => {
+		var menu = new Mmenu("#cart-burger-menu", {
+			"extensions": {
+				"all": [
+					"border-none",
+					"position-front"
+				],
+				"(max-width: 575px)": [
+					"fullscreen"
+				]
+			},
+
+			"navbars": [
+				{
+					"position": "top",
+					"content": [
+						' <header class="cart-header"> <div class="container--cart"> <div class="cart-header__wrapper"> <a href="#cart-burger-menu" class="burger-menu-btn burger-menu-btn--cart"></a> <img src="images/header/header-logo.svg" alt=""> </div> </div> </header>'
+					]
+				}
+			]
+		});
+
+		var api = menu.API;
+		$(".burger-menu-btn").click(function () {
+			api.close();
+			api.closeAllPanels();
+		});
+
+		
+	}
+);
+
+
 
 /* ==========================================================================
    Initialize Cart Menu for mobile
@@ -982,7 +1019,7 @@ $('.free-sample-slider').owlCarousel({
 		0: {
 			items: 2,
 			margin: 15,
-			dots: true,
+			dots: false,
 			// autoWidth: true,
 			// autoplay: true,
 			// autoplayTimeout: 5000,
@@ -1000,7 +1037,7 @@ $('.free-sample-slider').owlCarousel({
 		991: {
 			items: 3,
 			margin: 70,
-			dots: true,
+			dots: false,
 			nav: true,
 			// autoplay: true,
 			// autoplayTimeout: 5000,
@@ -1588,7 +1625,62 @@ $(document).ready(function () {
 		}
 	})
 
+	$("#new-user").on('click', function() { // 11-8-21
+		if($(this).prop("checked") == true){
+			$("#old-user").prop("checked", false);
+		}
+		else {
+			$(this).prop("checked", false);
+		}
+	})
+
+	$("#old-user").on('click', function() { // 11-8-21
+		if($(this).prop("checked") == true){
+			$("#new-user").prop("checked", false);
+		}
+		else {
+			$(this).prop("checked", false);
+		}
+	})
+
 });
+
+// Display password fields when user checks new account option
+$(document).ready(function () { // 11-8-21
+	$('#create-account').on('click', function() {
+		if($(this).prop("checked") == true){
+			$("#create-account-wrapper").slideDown();
+		}
+		else {
+			$("#create-account-wrapper").slideUp();
+		}
+	})
+});
+
+// Display order comments when user clicks on checkbox
+$(document).ready(function () { // 11-8-21
+	$('#order-comments').on('click', function() {
+		if($(this).prop("checked") == true){
+			$("#order-comments-wrapper").slideDown();
+		}
+		else {
+			$("#order-comments-wrapper").slideUp();
+		}
+	})
+});
+
+// Display invoice fields when user clicks on invoice checkbox
+$(document).ready(function () { // 11-8-21
+	$('#invoice').on('click', function() {
+		if($(this).prop("checked") == true){
+			$("#invoice-fields-wrapper").slideDown();
+		}
+		else {
+			$("#invoice-fields-wrapper").slideUp();
+		}
+	})
+});
+
 
 
 // change billing address form depending on document type checkbox
@@ -1941,4 +2033,10 @@ $(document).ready(function () {
 		subMenuDropdowns[i].style.minHeight = (actualMinHeight+70) + "px";
 	}
 
+});
+
+$(document).ready(function () {
+	$('.gift-wrapping-title').click(function(e) {
+		$('.gift-wrapping').toggleClass('is_open');
+	})
 });
