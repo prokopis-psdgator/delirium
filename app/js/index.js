@@ -1681,6 +1681,18 @@ $(document).ready(function () { // 11-8-21
 	})
 });
 
+// Display invoice fields when user clicks on invoice checkbox
+$(document).ready(function () { // 11-8-21
+	$('#old-user').on('click', function() {
+		if($(this).prop("checked") == true){
+			$("#account-form-wrapper").slideDown();
+		}
+		else {
+			$("#account-form-wrapper").slideUp();
+		}
+	})
+});
+
 
 
 // change billing address form depending on document type checkbox
