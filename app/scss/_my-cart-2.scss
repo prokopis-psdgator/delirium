@@ -204,16 +204,17 @@
     gap: 30px;
   }
 
-  @media screen and (max-width: $lg-over-max) {
+  @media screen and (max-width: 1200px) {
     @include flex-direction(column);
   }
 
   .main {
-    max-width: 1150px;
+    // max-width: 1150px;
+    max-width: calc(100% - 480px - 60px);
     @include flex-grow(1);
     @include flex-shrink(1);
 
-    @media screen and (max-width: $lg-over-max) {
+    @media screen and (max-width: 1200px) {
       max-width: 100%;
     }
   }
@@ -229,7 +230,7 @@
     top: 120px;
     height: 100%;
 
-    @media screen and (max-width: $lg-over-max) {
+    @media screen and (max-width: 1200px) {
       margin: 0 auto;
       width: 100%;
       max-width: 600px;
@@ -583,6 +584,13 @@
   @include align-items(center);
   @include justify-content(space-between);
   @include flex-direction(column);
+  @include flex-shrink(0);
+  @media screen and (min-width: 1400px){
+    width: 255px;
+  }
+  @media screen and (max-width: 1400px) and (min-width: 1200px) {
+    width: 200px;
+  }
 }
 
 .shopping-list-item {
@@ -609,11 +617,10 @@
 
   &__image {
     border-right: 1px solid $gold;
-    max-width: 100%;
     height: auto;
-
-    @media screen and (max-width: $lg-max) {
-      max-width: 190px;
+    
+    @media screen and (min-width: 1200px) {
+      max-width: 100% !important;
     }
 
     @media screen and (max-width: $md-max) {
@@ -630,6 +637,10 @@
 
     @media screen and (max-width: 1650px) {
       padding: 0 250px 0 50px;
+    }
+    
+    @media screen and (max-width: 1400px) {
+      padding: 0 50px 0 25px;
     }
 
     @media screen and (max-width: $md-max) {
@@ -676,6 +687,11 @@
     @include justify-content(space-between);
     @include align-items(center);
     gap: 100px;
+    
+    @media screen and (max-width: 1400px) and (min-width: 1200px) {
+      top: calc(100% - 40px);
+      @include translateY(unset);
+    }
 
     @media screen and (max-width: $md-max) {
       top: unset;
